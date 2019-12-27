@@ -44,7 +44,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             
             #endregion
             #region GetAndDisplayStatsForLast30Days
-            List<DailyLog> dataSet = await _context.DailyLogs.Take(30).OrderByDescending(dl => dl).ToListAsync();
+            List<DailyLog> dataSet = await _context.DailyLogs.Take(30).OrderByDescending(dl => dl.LogDate).ToListAsync();
             int upOnTimeInLast30Days = dataSet.Where(log => log.UpOnTime == true).Count();
             int percentageUpOnTimeInLast30Days = (int)(upOnTimeInLast30Days / 30.0 * 100);
             ViewBag.upOnTimeInLast30Days = upOnTimeInLast30Days;
@@ -66,7 +66,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             }
             ViewBag.countofRecentFormMissingOnlyMaximumOneDay = countOfRecentFormMissingOnlyMaximumOneDay;
             #endregion DisplayRunOfRecentForm
-            #region GetAndDisplayStatsForLast7Days
+            #region Get AndDisplayStatsForLast7Days
             List<DailyLog> dataSetLast7Days = dataSet.Take(7).ToList();
             int countUpOnTimeInLast7Days = dataSetLast7Days.Where(log => log.UpOnTime == true).Count();
             ViewBag.countUpOnTimeInLast7Days = countUpOnTimeInLast7Days;
@@ -78,9 +78,11 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             ViewBag.countUpOnTimeInLast14Days = countUpOnTimeInLast14Days;
             ViewBag.percentageUpOnTimeInLast14Days = (int)(countUpOnTimeInLast14Days / 14.0 * 100);
             #endregion
-
-
-
+            #region Temporary Extra Code To Put In Lines For Data Input
+            dataSet = await _context.DailyLogs.OrderByDescending(log=>log.LogDate).ToListAsync();
+            int totalCountOfAllStatsFromTheBeginning = dataSet.Where(log => log.UpOnTime == true).Count();
+            ViewBag.allTimePercentageSuccess = (int)(totalCountOfAllStatsFromTheBeginning / (double)dataSet.Count() * 100);
+            #endregion
             return View(dataSet);
         }
         #endregion
@@ -209,7 +211,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             return RedirectToAction(nameof(Index));
         }
         #endregion
-        #region Does A Log Exis
+        #region Does A Log Exist
         private bool DailyLogExists(int id)
         {
             return _context.DailyLogs.Any(e => e.DailyLogId == id);

@@ -29,13 +29,22 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            string connectionString = null;
 #if DEBUG
-            var connectionString = Environment.GetEnvironmentVariable("AzureFamilyDatabase04");
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                 connectionString = Environment.GetEnvironmentVariable("AzureFamilyDatabase04");
+
+            }
+            else 
+            {
+                 connectionString = Environment.GetEnvironmentVariable("AzureConnectionString");
+            }
 #else
-            var connectionString = Environment.GetEnvironmentVariable("APPSETTING_FamilyDatabase04");
+             connectionString = Environment.GetEnvironmentVariable("APPSETTING_FamilyDatabase04");
 #endif
-           services.AddDbContext<FamilyDbContext>(options => options.UseSqlServer(connectionString));
+            connectionString = Environment.GetEnvironmentVariable("APPSETTING_FamilyDatabase04");
+            services.AddDbContext<FamilyDbContext>(options => options.UseSqlServer(connectionString));
 
 
             services.AddDefaultIdentity<IdentityUser>()

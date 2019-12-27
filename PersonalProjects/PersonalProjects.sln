@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-2019-01-to-do", "wpf-to
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_FamilyApp_2019_11_02_Core_SQL", "MVC_FamilyApp_2019_11_02_Core_SQL\MVC_FamilyApp_2019_11_02_Core_SQL.csproj", "{FE971E64-402A-4E09-9A89-E15F8DFF23B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_01_Authentication_SQLite", "MVC_01_Authentication_SQLite\MVC_01_Authentication_SQLite.csproj", "{368C7AA7-62EC-4BD7-A084-C9D1F39E24C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FE971E64-402A-4E09-9A89-E15F8DFF23B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE971E64-402A-4E09-9A89-E15F8DFF23B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE971E64-402A-4E09-9A89-E15F8DFF23B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368C7AA7-62EC-4BD7-A084-C9D1F39E24C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368C7AA7-62EC-4BD7-A084-C9D1F39E24C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368C7AA7-62EC-4BD7-A084-C9D1F39E24C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368C7AA7-62EC-4BD7-A084-C9D1F39E24C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

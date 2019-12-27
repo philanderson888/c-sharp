@@ -13,7 +13,10 @@
   <ItemGroup>
     <PackageReference Include="EntityFramework.Toolkit.Core" Version="1.0.6" />
     <PackageReference Include="Microsoft.AspNet.Providers.Core" Version="2.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.App">
+      <PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+      <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="microsoft.entityframeworkcore" Version="2.1.1" />
     <PackageReference Include="microsoft.entityframeworkcore.design" Version="2.1.1" />
