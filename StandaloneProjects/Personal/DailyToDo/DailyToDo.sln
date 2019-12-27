@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyToDo_01", "DailyToDo_01\DailyToDo_01.csproj", "{97FA53FD-33A6-4ABC-9F7B-A39ABD375F4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyToDo_02", "DailyToDo_02\DailyToDo_02.csproj", "{D076BD20-C03D-4A4A-9621-2FEDECC3AF76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97FA53FD-33A6-4ABC-9F7B-A39ABD375F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FA53FD-33A6-4ABC-9F7B-A39ABD375F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FA53FD-33A6-4ABC-9F7B-A39ABD375F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FA53FD-33A6-4ABC-9F7B-A39ABD375F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D076BD20-C03D-4A4A-9621-2FEDECC3AF76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D076BD20-C03D-4A4A-9621-2FEDECC3AF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D076BD20-C03D-4A4A-9621-2FEDECC3AF76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D076BD20-C03D-4A4A-9621-2FEDECC3AF76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E63932F8-1005-4DC1-92D3-9EA3F8002BC1}
+	EndGlobalSection
+EndGlobal

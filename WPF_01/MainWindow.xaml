@@ -1,0 +1,17 @@
+﻿<Window x:Class="WPF_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Background="#FFCB7B7B">
+    <Grid Margin="0,0,-86.207,-112.069">
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="22,18,0,0" VerticalAlignment="Top" Width="204" Height="51" Click="button_Click"/>
+        <Grid HorizontalAlignment="Left" Height="156" Margin="325,27,0,0" VerticalAlignment="Top" Width="163">
+            <Ellipse Fill="#FFF4F4F5" Margin="10,25.31,-2.828,-13.793" Stroke="Black"/>
+        </Grid>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="137" Margin="134,140,0,0" VerticalAlignment="Top" Width="153"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,11 @@
+﻿@model ASP_MVC_04.Models.Person
+@{
+    ViewBag.Title = "InputName";
+}
+
+<h2>InputName</h2>
+
+<form action="/People/InputName" method="post">
+    @Html.EditorForModel()
+    <input type="submit" value="Submit My Name" />
+</form>

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.codecoverage" Version="16.1.1" />
+    <PackageReference Include="microsoft.net.test.sdk" Version="16.1.1" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="nunit3testadapter" Version="3.13.0" />
+    <PackageReference Include="selenium.chrome.webdriver" Version="74.0.0" />
+    <PackageReference Include="selenium.webdriver" Version="3.141.0" />
+  </ItemGroup>
+
+</Project>

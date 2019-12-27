@@ -1,0 +1,11 @@
+﻿@page
+@model ASP_Core_Entity_12.Pages.CustomersModel
+@{
+}
+
+<ul>
+        @foreach (var c in Model.customers)
+        {
+            <li>@c.ContactName</li>
+        }
+</ul>

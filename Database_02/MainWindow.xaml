@@ -1,0 +1,25 @@
+﻿<Window x:Class="Database_02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database_02"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="buttonDisplayItems" Content="Display Data" Background="Beige" Grid.Row="0" Grid.Column="0" Click="buttonDisplayItems_Click" />
+        <TextBlock x:Name="textBlock01" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Background="LightGoldenrodYellow" Text="hi"/>
+        <TextBox x:Name="textBox01" Grid.Row="0" Grid.Column="1" Background="Azure" />
+        <Button x:Name="buttonUpdate" Content="Update Name" Background="Tan" Grid.Row="0" Grid.Column="2" Click="buttonUpdate_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,72 @@
+﻿@page
+@model ASP_Core_Entity_09_Web_MAC.Pages.CustomerListAdd5Model
+@{
+}
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a asp-page="/Index" class="navbar-brand">ASP_Core_09_Web_MAC</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-page="/Index">Home</a></li>
+                <li><a asp-page="/About">About</a></li>
+                <li><a asp-page="/Contact">Contact</a></li>
+                <li><a asp-page="/CustomerList">CustomerList</a></li>
+                <li><a asp-page="/CustomerListAndAdd2">CustomerListAndAdd</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form method="post">
+    <div class="form-group">
+        <label for="CustomerID">Customer ID</label>
+        <input asp-for="customer.CustomerID" type="text" class="form-control" id="CustomerID" aria-describedby="emailHelp" placeholder="Customer ID">
+    </div>
+    <div class="form-group">
+        <label for="ContactName">Contact Name</label>
+        <input asp-for="customer.ContactName" type="text" class="form-control" id="ContactName" aria-describedby="emailHelp" placeholder="Contact Name">
+    </div>
+    <div class="form-group">
+        <label for="CompanyName">Company Name</label>
+        <input asp-for="customer.CompanyName" type="text" class="form-control" id="CompanyName" aria-describedby="emailHelp" placeholder="Company Name">
+    </div>
+    <div class="form-group">
+        <label for="Citu">City</label>
+        <input asp-for="customer.City" type="text" class="form-control" id="City" aria-describedby="emailHelp" placeholder="City">
+    </div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model.customers)
+
+        {
+
+        <tr>
+            <th scope="row">@c.CustomerID</th>
+            <td>@c.ContactName</td>
+            <td>@c.Address</td>
+            <td>@c.City</td>
+            <td>@c.Country</td>
+        </tr>
+        }
+    </tbody>
+</table>

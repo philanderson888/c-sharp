@@ -1,0 +1,22 @@
+﻿<Window x:Class="UserControlProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserControlProject"
+        xmlns:loc="clr-namespace:UserControlProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <loc:UserControl1 x:Name="UserControl1" Grid.Row="0" Grid.Column="0" Loaded="UserControl01_Loaded" PlaceOrder="dothis"/>
+        <Label x:Name="label01" Background="Aqua" Grid.Row="0" Grid.Column="1" Content="Label" />
+    </Grid>
+</Window>

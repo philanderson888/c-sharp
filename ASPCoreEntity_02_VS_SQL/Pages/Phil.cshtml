@@ -1,0 +1,15 @@
+﻿@page
+@model PhilModel
+@{
+}
+
+<h1>Phil's page</h1>
+
+
+<ul>
+    @foreach (Product p in Model.Products)
+    {
+        <li>Product is @p.ProductName</li>
+
+    }
+</ul>

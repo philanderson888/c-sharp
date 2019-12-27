@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="XAML_01.Window4UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:XAML_01"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="Do you want coffee or tea?"/>
+            <RadioButton x:Name="radCoffee" Content="Coffee" HorizontalAlignment="Left"
+VerticalAlignment="Top" Margin="5,5,5,5" GroupName="Beverage"
+IsChecked="True" Checked="radCoffee_Checked" />
+            <RadioButton x:Name="radTea" Content="Tea" HorizontalAlignment="Left"
+VerticalAlignment="Top" Margin="5,5,5,5" GroupName="Beverage"
+Checked="radTea_Checked"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Label Content="Do you want milk?"/>
+            <RadioButton x:Name="radMilk" Content="Milk" HorizontalAlignment="Left"
+VerticalAlignment="Top" Margin="5,5,5,5" GroupName="Milk"
+IsChecked="True" Checked="radMilk_Checked" />
+            <RadioButton x:Name="radNoMilk" Content="No Milk" HorizontalAlignment="Left"
+VerticalAlignment="Top" Margin="5,5,5,5" GroupName="Milk"
+Checked="radNoMilk_Checked"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Label Content="Do you want sugar?"/>
+            <RadioButton x:Name="radSugar" Content="Sugar" HorizontalAlignment="Left"
+VerticalAlignment="Top" Margin="5,5,5,5" GroupName="Sugar"
+IsChecked="True" Checked="radSugar_Checked" />
+            <RadioButton x:Name="radNoSugar" Content="No Sugar"
+HorizontalAlignment="Left"
+VerticalAlignment="Top" Margin="5,5,5,5" GroupName="Sugar"
+Checked="radNoSugar_Checked"/>
+        </StackPanel>
+        <Button x:Name="btnOrder" Content="Place Order" Margin="5,5,5,5" Grid.Row="3"
+Click="btnOrder_Click"/>
+        
+        
+    </Grid>
+</UserControl>

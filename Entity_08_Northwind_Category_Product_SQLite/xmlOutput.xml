@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product id="1" price="18">
+    <name>Chai</name>
+  </product>
+  <product id="2" price="19">
+    <name>Chang</name>
+  </product>
+  <product id="3" price="10">
+    <name>Aniseed Syrup</name>
+  </product>
+</products>

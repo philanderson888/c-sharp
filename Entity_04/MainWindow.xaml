@@ -1,0 +1,30 @@
+﻿<Window x:Class="Entity_04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Entity_04"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button01" Content="Display Customer List" Background="BlanchedAlmond" Grid.Row="0" Grid.Column="0" Click="button01_Click" FontSize="20" />
+        <Button x:Name="button02" Content="Filter Customer By City" Background="CornflowerBlue"  Grid.Row="0" Grid.Column="1" Click="button02_Click" FontSize="20"/>
+        <Button x:Name="button03" Content="Button03" Background="Cornsilk"  Grid.Row="0" Grid.Column="2" Click="button03_Click" />
+        <TextBox x:Name="textBox01" Text="textBlock01" Background="Aqua" Grid.Row="1" Grid.Column="0"/>
+        <TextBox x:Name="textBox02" Text="Filter By City" Background="Gold"  Grid.Row="1" Grid.Column="1" />
+        <TextBox x:Name="textBox03" Text="textBlock03" Background="Fuchsia"  Grid.Row="1" Grid.Column="2"/>
+        <ListBox x:Name="listBox01" Grid.Row="2" Grid.Column="0" Background="Aquamarine" FontSize="20" SelectionChanged="listBox01_SelectionChanged" Margin="0,5,0,-5" />
+        <ListBox x:Name="listBox02" Grid.Row="2" Grid.Column="1" Background="Beige" />
+        <ListBox x:Name="listBox03" Grid.Row="2" Grid.Column="2" Background="BurlyWood" />
+    </Grid>
+</Window>

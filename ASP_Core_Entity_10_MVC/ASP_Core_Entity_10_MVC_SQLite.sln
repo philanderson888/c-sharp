@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_Core_Entity_10_MVC_SQLite", "ASP_Core_Entity_10_MVC_SQLite.csproj", "{A2836F05-BDE3-4F14-B7E2-6C437E0263A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2836F05-BDE3-4F14-B7E2-6C437E0263A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2836F05-BDE3-4F14-B7E2-6C437E0263A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2836F05-BDE3-4F14-B7E2-6C437E0263A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2836F05-BDE3-4F14-B7E2-6C437E0263A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+
+<p>Use this area to provide additional information.</p>
+
+<ul>
+@foreach(ASP_Core_Entity_08_Web.Models.Customer c in Model.customers)
+{
+    <li>@c.CustomerID -- @c.ContactName</li>
+}
+
+    </ul>

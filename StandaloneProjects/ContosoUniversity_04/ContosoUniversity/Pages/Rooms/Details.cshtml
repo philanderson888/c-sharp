@@ -1,0 +1,37 @@
+﻿@page
+@model ContosoUniversity.Pages.Rooms.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.RoomName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.RoomName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.OpenTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.OpenTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.CloseTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.CloseTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Room.RoomID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

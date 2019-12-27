@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CSS Vertical Bar Graphs</title>
+<style type="text/css">
+html {background: #909AA9;}
+body {background: #FFF; margin: 0 5%; padding: 1em;
+  border: 3px solid gray; border-width: 0 3px;}
+h1 {font: bold 2em/0.85 Arial, sans-serif; text-align: center; letter-spacing: 1px;
+  margin: 1em -0.5em; padding: 0 0.5em;
+  border-bottom: 2px solid gray;}
+
+#q-graph {position: relative; width: 600px; height: 300px;
+  margin: 1.1em 0 3.5em; padding: 0;
+  background: #DDD url(fade-light.png) repeat-x;
+  border: 2px solid gray; list-style: none;
+  font: 9px Helvetica, Geneva, sans-serif;}
+#q-graph ul {margin: 0; padding: 0; list-style: none;}
+#q-graph li {position: absolute; bottom: 0; width: 150px; z-index: 2;
+  margin: 0; padding: 0;
+  text-align: center; list-style: none;}
+#q-graph li.qtr {height: 298px; padding-top: 2px;
+  border-right: 1px dotted #C4C4C4; color: #AAA;}
+#q-graph li.bar {width: 60px; border: 1px solid; border-bottom: none; color: #000;}
+#q-graph li.bar p {margin: 5px 0 0; padding: 0;}
+#q-graph li.sent {left: 13px; background: #DCA url(fade-dark.png) repeat-x;
+  border-color: #EDC #BA9 #000 #EDC;}
+#q-graph li.paid {left: 77px; background: #9D9 url(fade-dark.png) repeat-x;
+  border-color: #CDC #9B9 #000 #BFB;}
+#q-graph #q1 {left: 0;}
+#q-graph #q2 {left: 150px;}
+#q-graph #q3 {left: 300px;}
+#q-graph #q4 {left: 450px; border-right: none;}
+
+#q-graph #ticks {width: 600px; height: 300px; z-index: 1;}
+#q-graph #ticks .tick {position: relative; border-bottom: 1px solid #BBB; width: 600px;}
+#q-graph #ticks .tick p {position: absolute; left: 100%; top: -0.67em; margin: 0 0 0 0.5em;}
+</style>
+</head>
+<body>
+
+<h1>CSS Vertical Bar Graphs</h1>
+
+<p>
+Here's a fairly typical vertical bar graph showing a hypothetical set of quarterly data for, say, invoice and collection totals.  The difference here is that the whole thing is a simple set of nested lists and CSS.  Really.
+</p>
+
+<ul id="q-graph">
+
+<li class="qtr" id="q1">Q1
+<ul>
+<li class="sent bar" style="height: 111px;"><p>$18,450.00</p></li>
+<li class="paid bar" style="height: 99px;"><p>$16,500.00</p></li>
+</ul>
+</li>
+
+<li class="qtr" id="q2">Q2
+<ul>
+<li class="sent bar" style="height: 206px;"><p>$34,340.72</p></li>
+<li class="paid bar" style="height: 194px;"><p>$32,340.72</p></li>
+</ul>
+</li>
+
+<li class="qtr" id="q3">Q3
+<ul>
+<li class="sent bar" style="height: 259px;"><p>$43,145.52</p></li>
+<li class="paid bar" style="height: 193px;"><p>$32,225.52</p></li>
+</ul>
+</li>
+
+<li class="qtr" id="q4">Q4
+<ul>
+<li class="sent bar" style="height: 110px;"><p>$18,415.96</p></li>
+<li class="paid bar" style="height: 195px;"><p>$32,425.00</p></li>
+</ul>
+</li>
+
+<li id="ticks">
+<div class="tick" style="height: 59px;"><p>$50,000</p></div>
+<div class="tick" style="height: 59px;"><p>$40,000</p></div>
+<div class="tick" style="height: 59px;"><p>$30,000</p></div>
+<div class="tick" style="height: 59px;"><p>$20,000</p></div>
+<div class="tick" style="height: 59px;"><p>$10,000</p></div>
+</li>
+
+</ul>
+
+<p>
+It's pretty much all positioning.  Actually, once you figure out how you want the graph to look, figuring out how to position things is fairly simple.  The (comparatively) hard part is in figuring out how to calculate the heights of the various vertical bars and the horizontal "strata".  This could be done in PHP, ASP, or some other server-side processing engine; via JavaScript on the client side; or manually by someone who really loves their calculator.
+</p>
+<p>
+You can view source to see how simple it is, or here's the same list with the inline styles, classes, and IDs stripped away.
+</p>
+
+<ul>
+
+<li>Q1
+<ul>
+<li><p>$18,450.00</p></li>
+<li><p>$16,500.00</p></li>
+</ul>
+</li>
+
+<li>Q2
+<ul>
+<li><p>$34,340.72</p></li>
+<li><p>$32,340.72</p></li>
+</ul>
+</li>
+
+<li>Q3
+<ul>
+<li><p>$43,145.52</p></li>
+<li><p>$32,225.52</p></li>
+</ul>
+</li>
+
+<li>Q4
+<ul>
+<li><p>$18,415.96</p></li>
+<li><p>$32,425.00</p></li>
+</ul>
+</li>
+
+<li>
+<div><p>$50,000</p></div>
+<div><p>$40,000</p></div>
+<div><p>$30,000</p></div>
+<div><p>$20,000</p></div>
+<div><p>$10,000</p></div>
+</li>
+
+</ul>
+
+<p>
+Here's how it works: the data from each quarter is contained in a list item.  This list item contains the label (e.g., "Q2") and a nested list that has one list item for the invoices, and one for the collections.  The <code>ul</code> element is positioned with the desired height and width, which are here expressed in pixels.
+</p>
+<p>
+The four quarters are absolutely positioned with respect to the <code>ul</code> element using <code>position: absolute</code>.  They're all the same size, and only the value of <code>left</code> changes for each one.  From there, it's a simple matter to absolutely position the <code>sent</code> and <code>paid</code> bars inside each quarter-box (which, being positioned, acts as the containing block for the bars).  A little extra positioning to place the numbers, and we have our basic layout.
+</p>
+<p>
+The "ticks" (the horizontal bars) are created with a few <code>div</code>s that all have the same height and stack one atop another.  Since everything that comes before them in the list is already positioned, we don't have to absolutely position the <code>div</code>s.  They just drop into place.  The labels are placed just outside the tick-<code>div</code>s with some simple absolute positioning of their own.
+</p>
+<p>
+The last bit is adding colors and gradient background images, which is straightforward enough.
+</p>
+<p>
+The graph probably won't look as nice on IE/Windows as it does in Firefox, Safari, or Opera, since the graph uses PNGs with full alpha channels to create the fades on the graph background as well as the vertical bars.  Try this <a href="demo-ie.html">visually flatter but more IE/Win-friendly version</a>, should you be so inclined.
+</p>
+
+<p>
+Similar but <a href="http://apples-to-oranges.com/blog/article.aspx?id=55">much nicer-looking work was published in November 2005</a> by <a href="http://apples-to-oranges.com/blog/">Apples to Oranges</a>.
+</p>
+
+<h3>Jump to</h3>
+<ul>
+<li><a href="../index.html">css/edge home</a></li>
+<li><a href="demo-ie.html">demo without PNG-driven fades</a></li>
+<li><a href="demo-table.html">demo based on a table instead of lists</a></li>
+</ul>
+
+</body>
+</html>

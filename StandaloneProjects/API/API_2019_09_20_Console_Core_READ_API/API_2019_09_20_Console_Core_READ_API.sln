@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29311.281
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_2019_09_20_Console_Core_READ_API", "API_2019_09_20_Console_Core_READ_API.csproj", "{3068FA5D-C637-4CFD-AC90-E229942F7800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3068FA5D-C637-4CFD-AC90-E229942F7800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3068FA5D-C637-4CFD-AC90-E229942F7800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3068FA5D-C637-4CFD-AC90-E229942F7800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3068FA5D-C637-4CFD-AC90-E229942F7800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CEFA2AA-3D75-4ACD-8C86-148048FBE3F4}
+	EndGlobalSection
+EndGlobal

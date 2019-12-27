@@ -1,0 +1,23 @@
+﻿<Window x:Class="Despatcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Despatcher"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button01" Background="Brown" Click="button01_Click" />
+        <Label x:Name="Label01" Content="Label01" Background="Aquamarine" Grid.Row="0" Grid.Column="1" FontSize="30"/>
+        <Label x:Name="Label02" Content="Label02" Background="Beige" Grid.Row="1" Grid.Column="1" FontSize="30"/>
+
+    </Grid>
+</Window>

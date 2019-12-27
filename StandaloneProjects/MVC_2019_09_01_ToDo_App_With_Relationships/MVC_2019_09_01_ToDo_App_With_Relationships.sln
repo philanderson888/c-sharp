@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_2019_09_01_ToDo_App_With_Relationships", "MVC_2019_09_01_ToDo_App_With_Relationships.csproj", "{B7BA3798-FE13-4E22-B1DB-3F0A52BADB25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7BA3798-FE13-4E22-B1DB-3F0A52BADB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BA3798-FE13-4E22-B1DB-3F0A52BADB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BA3798-FE13-4E22-B1DB-3F0A52BADB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BA3798-FE13-4E22-B1DB-3F0A52BADB25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5595A6EC-DF5D-47C0-B232-7E37DA20DC33}
+	EndGlobalSection
+EndGlobal

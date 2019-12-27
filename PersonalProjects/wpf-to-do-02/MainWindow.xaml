@@ -1,0 +1,43 @@
+﻿<Window x:Class="to_do_02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:to_do_02"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="7*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="LabelMon" Background="#e0e59e" Grid.Row="1" Grid.Column="1" Content="Mon" />
+        <Label x:Name="LabelTue" Background="#e0e59e" Grid.Row="1" Grid.Column="2" Content="Tue" />
+        <Label x:Name="LabelWed" Background="#e0e59e" Grid.Row="1" Grid.Column="3" Content="Wed" />
+        <Label x:Name="LabelThu" Background="#e0e59e" Grid.Row="1" Grid.Column="4" Content="Thu" />
+        <Label x:Name="LabelFri" Background="#e0e59e" Grid.Row="1" Grid.Column="5" Content="Fri" />
+        <Label x:Name="LabelTask01" Background="#9ee2ae" Grid.Row="3" Grid.Column="0" />
+        <DatePicker x:Name="DatePicker01" Grid.Row="2" Grid.Column="1" />
+        <DatePicker x:Name="DatePicker02" Grid.Row="2" Grid.Column="2" />
+        <DatePicker x:Name="DatePicker03" Grid.Row="2" Grid.Column="3" />
+        <DatePicker x:Name="DatePicker04" Grid.Row="2" Grid.Column="4" />
+        <DatePicker x:Name="DatePicker05" Grid.Row="2" Grid.Column="5" />
+        <CheckBox x:Name="CheckBox01" Background="Beige" Grid.Row="3" Grid.Column="1" Content="" Checked="CheckBox01_Checked"  />
+        <CheckBox x:Name="CheckBox02" Background="Beige" Grid.Row="3" Grid.Column="2" Content="" Checked="CheckBox02_Checked"  />
+        <CheckBox x:Name="CheckBox03" Background="Beige" Grid.Row="3" Grid.Column="3" Content="" Checked="CheckBox03_Checked"  />
+        <CheckBox x:Name="CheckBox04" Background="Beige" Grid.Row="3" Grid.Column="4" Content="" Checked="CheckBox04_Checked"  />
+        <CheckBox x:Name="CheckBox05" Background="Beige" Grid.Row="3" Grid.Column="5" Content="" Checked="CheckBox05_Checked"  />
+    </Grid>
+</Window>

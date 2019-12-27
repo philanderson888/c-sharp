@@ -1,0 +1,70 @@
+﻿@model ASP_Core_Entity_10_MVC.Models.HomeIndexViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        1
+    </div>
+    <div class="col-md-3">
+        2
+    </div>
+    <div class="col-md-3">
+        3
+    </div>
+    <div class="col-md-3">
+        4
+    </div>
+</div>
+
+
+@foreach (var c in Model.customers)
+{
+
+    <div class="row">
+        <a href="/Home/CustomerDetail/@c.CustomerID">
+            <div class="col-md-3">
+                @c.CustomerID
+            </div>
+            <div class="col-md-3">
+                @c.ContactName
+            </div>
+            <div class="col-md-3">
+                @c.Address
+            </div>
+            <div class="col-md-3">
+                @c.City
+            </div>
+        </a>
+    </div>
+}
+
+
+
+
+
+@foreach (var c in Model.customers)
+{
+
+
+
+<div class="row">
+    <a asp-controller="Home" asp-action="CustomerDetail" asp-route-id="@c.CustomerID">
+        <div class="col-md-3">
+          @c.CustomerID
+        </div>
+        <div class="col-md-3">
+          @c.ContactName
+        </div>
+        <div class="col-md-3">
+          @c.Address
+        </div>
+        <div class="col-md-3">
+            @c.City
+        </div>
+     </a>
+</div>
+}

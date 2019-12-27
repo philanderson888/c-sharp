@@ -1,0 +1,71 @@
+﻿@model IEnumerable<FamilyApp_2019_10_12.DadDailyItem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TodaysDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpOnTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetEarlyTrain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CallPhilip550)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CallChrista550)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkAtFinsburyPark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HitTheGym)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TodaysDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpOnTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetEarlyTrain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CallPhilip550)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CallChrista550)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkAtFinsburyPark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HitTheGym)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DadDailyItemId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DadDailyItemId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DadDailyItemId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

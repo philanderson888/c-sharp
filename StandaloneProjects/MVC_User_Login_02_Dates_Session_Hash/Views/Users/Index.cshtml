@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVC_User_Login.Models.User>
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<p>@Html.ActionLink("Create New User", "Register", "Users")</p>
+
+<table class="table table-striped table-bordered table-hover">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.UserId)</th>
+        <th>@Html.DisplayNameFor(model => model.UserName)</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(u => user.UserId)</td>
+            <td>@Html.DisplayFor(u => user.UserName)</td>
+        </tr>
+    }
+</table>
+

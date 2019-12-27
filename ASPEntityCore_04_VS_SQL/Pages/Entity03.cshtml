@@ -1,0 +1,11 @@
+﻿@page
+@model Entity03Model
+@{
+}
+<h1>@ViewData["Title"]</h1>
+<ol>
+    @foreach (string customer in Model.Customers)
+    {
+        <li>@customer</li>
+    }
+</ol>

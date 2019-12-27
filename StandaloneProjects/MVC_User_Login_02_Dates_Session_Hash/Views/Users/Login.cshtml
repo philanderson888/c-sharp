@@ -1,0 +1,37 @@
+﻿@model MVC_User_Login.Models.UserLoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+<h2>@ViewBag.Title</h2>
+
+@if (ViewBag.MustLoginToViewUsers == true) {
+    <p>You must be logged in to view the list of active users</p>
+}
+@using (@Html.BeginForm()){
+
+@Html.AntiForgeryToken()
+
+<div class="form-group">
+    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label" })
+    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+    <br />
+    @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model=>model.Password,"",new { @class = "text-danger" })
+    @if (ViewBag.InvalidPassword == true)
+    {
+        <p>Invalid Password</p>
+    }
+</div>
+
+<div class="form-group">
+    <input type="submit" value="Login" class="btn btn-default" />
+</div>
+}
+
+
+

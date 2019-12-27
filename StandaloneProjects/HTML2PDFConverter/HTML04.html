@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Capitalise String Using Slice</title>
+    <style>
+        html{
+            background-color:bisque;
+            font-family:Arial;
+        }
+        .inputArea{
+            background-color:azure;
+            margin:50px 25px 10px 25px;
+            padding:50px 25px;
+        }
+        h1{
+            text-decoration:underline;
+            margin-bottom:50px;
+        }
+        input[type=text]{
+            display:block;
+            font-size:36px;
+        }
+        button{
+            margin:25px 0;
+            background-color:lightblue;
+            font-size:24px;
+        }
+        .outputArea{
+            background-color:beige;
+            margin:10px 25px;
+            padding:20px 25px;
+            font-size:xx-large;
+        }
+    </style>
+</head>
+<body>
+   <div class="inputArea">
+           <h1>Input form - properly capitalise all input</h1>
+           <input id="inputString" type="text" value="This Is MY STRING"/>
+           <button onclick="fnCapitalise()">Click to capitalise string</button>
+
+   </div>
+    <div class="outputArea">
+        <p id="outputString">ggg
+        </p>
+    </div>
+<script>
+    function fnCapitalise(){
+        var strInput = document.getElementById('inputString').value;
+        console.log(strInput);
+        var firstChar = strInput.slice(0, 1);   // First Character
+        var otherChars = strInput.slice(1);     // Second character onwards 
+        firstChar = firstChar.toUpperCase();
+        otherChars = otherChars.toLowerCase();
+        var strOutput = firstChar + otherChars;
+        document.getElementById('outputString').innerHTML = strInput + " becomes ==> " + strOutput;
+        console.log('StrOutput = '+ strOutput);
+    }
+    
+   
+
+</script>
+</body>
+</html>

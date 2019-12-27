@@ -1,0 +1,38 @@
+﻿@page
+@model ASPCore_01_VS.Pages.Index2Model
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+</head>
+<body>
+    <h2>Title is @ViewData["Title"]</h2>
+    <p>Pages/index.cshtml page says Hello World!!!</p>
+    <p>It also has a data value of @Model.SomeValue</p>
+    
+    <ol>
+        @foreach (string s in Model.list)
+        {
+            <li>Item is @s</li>
+
+        }
+    </ol>
+    <ul>
+        @foreach(string t in Model.Suppliers)
+        {
+            <li>Suppliers item is @t</li>
+
+        }
+    </ul>
+    <ol>
+        @foreach(string s in Model.categoryNames)
+        {
+            <li>@s</li>
+
+        }
+    </ol>
+
+</body>
+</html>

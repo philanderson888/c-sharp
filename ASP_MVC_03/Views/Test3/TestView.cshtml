@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "TestView";
+}
+
+    <h2>@ViewBag.Title</h2>
+
+
+
+<ul>
+    @for (int i = 0; i < 10; i++)
+    {
+        <li>@i</li>
+    }
+</ul>
+
+@string.Concat("Some " + "Text")
+
+<hr />
+
+@{ 
+    int j = 7;
+    int k = 8;
+    if (j < k)
+    {
+        @j
+    }
+}
+
+<hr />
+
+<ul>
+@foreach(string item in ViewBag.Names)
+{
+    <li>@item</li>
+}
+ </ul>
+
+

@@ -1,0 +1,74 @@
+﻿@page
+@model ASP_Core_Entity_11_Web.Controllers.EditModel
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Customer.CustomerID" />
+            <div class="form-group">
+                <label asp-for="Customer.CompanyName" class="control-label"></label>
+                <input asp-for="Customer.CompanyName" class="form-control" />
+                <span asp-validation-for="Customer.CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ContactName" class="control-label"></label>
+                <input asp-for="Customer.ContactName" class="form-control" />
+                <span asp-validation-for="Customer.ContactName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ContactTitle" class="control-label"></label>
+                <input asp-for="Customer.ContactTitle" class="form-control" />
+                <span asp-validation-for="Customer.ContactTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Address" class="control-label"></label>
+                <input asp-for="Customer.Address" class="form-control" />
+                <span asp-validation-for="Customer.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.City" class="control-label"></label>
+                <input asp-for="Customer.City" class="form-control" />
+                <span asp-validation-for="Customer.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Region" class="control-label"></label>
+                <input asp-for="Customer.Region" class="form-control" />
+                <span asp-validation-for="Customer.Region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.PostalCode" class="control-label"></label>
+                <input asp-for="Customer.PostalCode" class="form-control" />
+                <span asp-validation-for="Customer.PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Country" class="control-label"></label>
+                <input asp-for="Customer.Country" class="form-control" />
+                <span asp-validation-for="Customer.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Phone" class="control-label"></label>
+                <input asp-for="Customer.Phone" class="form-control" />
+                <span asp-validation-for="Customer.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Fax" class="control-label"></label>
+                <input asp-for="Customer.Fax" class="form-control" />
+                <span asp-validation-for="Customer.Fax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

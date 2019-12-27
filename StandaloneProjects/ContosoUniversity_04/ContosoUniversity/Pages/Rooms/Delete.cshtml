@@ -1,0 +1,40 @@
+﻿@page
+@model ContosoUniversity.Pages.Rooms.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.RoomName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.RoomName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.OpenTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.OpenTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.CloseTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.CloseTime)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Room.RoomID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

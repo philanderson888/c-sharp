@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Entity_08_Northwind_Category_Product_SQLite/Entity_08_Northwind_Category_Product_SQLite.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

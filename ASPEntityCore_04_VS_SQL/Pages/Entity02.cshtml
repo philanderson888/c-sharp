@@ -1,0 +1,28 @@
+﻿@page
+@model Entity02Model
+@{
+}
+
+<h2>Entity02</h2>
+
+<h3>@ViewData["Title"]</h3>
+
+<ul>
+    @foreach (ASPCoreEntity_03_Data.Customer c in Model.Customers)
+    {
+        <li>Customer name is @c.ContactName</li>
+    }
+</ul>
+
+<hr />
+
+<h3>Customer Subset</h3>
+
+<h2>@Model.CustomerCity</h2>
+<ol>
+    @foreach(ASPCoreEntity_03_Data.Customer c in Model.CustomerSubset)
+    {
+        <li>Customers from @Model.CustomerCity : @c.ContactName has ID @c.CustomerID</li>
+
+    }
+</ol>

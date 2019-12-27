@@ -1,0 +1,42 @@
+﻿@page
+@model ASP_Core_Entity_11_Web.Pages.Page01Model
+@{
+    ViewData["Title"] = "Page01";
+    ViewData["Value"] = "some value";
+    ViewBag.Value2 = "Second value";
+}
+
+<h2>Page01</h2>
+
+<p>@DateTime.Now</p>
+
+<ul>
+    @for(var i = 1; i <= 10; i++)
+    {
+        <li>Item is @i</li>
+    }
+</ul>
+
+<h1>@ViewData["Value"]</h1>
+
+<h2>@ViewBag.Value2</h2>
+
+<h3>Date in 2 days is @Model.Property01</h3>
+
+
+
+<ul>
+    @foreach (var item in Model.items)
+    {
+    <li>@item</li>
+    }
+</ul>
+
+
+
+<ul>
+    @foreach(var c in Model.customers)
+    {
+        <li>@c.CustomerID -- @c.ContactName -- @c.CompanyName -- @c.City</li>
+    }
+</ul>

@@ -1,0 +1,99 @@
+﻿@model MVC_FamilyApp_2019_11_02_Core_SQL.DailyLog
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>DailyLog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LogDate" class="control-label"></label>
+                <input asp-for="LogDate" class="form-control" />
+                <span asp-validation-for="LogDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="UpOnTime" /> @Html.DisplayNameFor(model => model.UpOnTime)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="StayedUp" /> @Html.DisplayNameFor(model => model.StayedUp)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="MadeGym" /> @Html.DisplayNameFor(model => model.MadeGym)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PrWthFam" /> @Html.DisplayNameFor(model => model.PrWthFam)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PrWthZ" /> @Html.DisplayNameFor(model => model.PrWthZ)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="CrsPryPhoto" /> @Html.DisplayNameFor(model => model.CrsPryPhoto)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PhilPryPhoto" /> @Html.DisplayNameFor(model => model.PhilPryPhoto)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="CrsDeskPhoto" /> @Html.DisplayNameFor(model => model.CrsDeskPhoto)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="NbrSns" class="control-label"></label>
+                <input asp-for="NbrSns" class="form-control" />
+                <span asp-validation-for="NbrSns" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

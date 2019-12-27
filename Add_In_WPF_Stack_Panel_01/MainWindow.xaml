@@ -1,0 +1,39 @@
+﻿<Window x:Class="lab_15_panels.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_15_panels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="Auto" Background="#c4d6f2">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ButtonChangePanel" Background="#8db3ef" Grid.Row="1" Content="Change Panel" Click="ButtonChangePanel_Click"/>
+        <Button x:Name="ButtonChangeTab" Background="#8fa4c6" Grid.Row="3" Content="Change Panel By Index" Click="ButtonChangeTab_Click"  />
+        <Button x:Name="ButtonChangeTabByName" Background="#8fa4c6" Grid.Row="4" Content="Change Panel By Name" Click="ButtonChangeTabByName_Click" />
+        <StackPanel x:Name="StackPanel01" Background="#5992ea" Grid.Row="1" Grid.Column="1"/>
+        <StackPanel x:Name="StackPanel02" Background="#347ced" Grid.Row="1" Grid.Column="1"/>
+        <StackPanel x:Name="StackPanel03" Background="#0c65f2" Grid.Row="1" Grid.Column="1"/>
+        <TabControl x:Name="TabControl01" Background="#75dadd" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2">
+            <TabItem x:Name="First" Background="#84e8dc" Header="First">
+                <Label x:Name="Label01" Content="First" />
+            </TabItem>
+            <TabItem x:Name="Second" Background="#56efdd" Header="Second">
+                <Label x:Name="Label02" Content="Second" />
+            </TabItem>
+            <TabItem x:Name="Third" Background="#1cedd4" Header="Third">
+                <Label x:Name="Label03" Content="Third" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

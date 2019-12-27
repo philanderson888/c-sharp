@@ -1,0 +1,13 @@
+﻿@page
+@model TestModel
+@{
+}
+
+hey
+<ul>
+@foreach(ASP_Core_Entity_07_Web.Customer c in ASP_Core_Entity_07_Web.TestModel.customers)
+{
+    <li>@c.CustomerID</li>
+}
+
+    </ul>

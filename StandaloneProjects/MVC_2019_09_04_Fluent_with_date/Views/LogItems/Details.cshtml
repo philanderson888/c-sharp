@@ -1,0 +1,36 @@
+﻿@model MVC_2019_09_04_Fluent_with_date.LogItem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LogItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LogItemDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LogItemDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LogItemPoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LogItemPoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.LogItemId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

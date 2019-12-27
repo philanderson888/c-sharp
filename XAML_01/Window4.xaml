@@ -1,0 +1,27 @@
+﻿<Window x:Class="XAML_01.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XAML_01"
+        xmlns:myUserControl01="clr-namespace:XAML_01"
+        mc:Ignorable="d"
+        Title="Window4" Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Top label" Grid.Row="0" Grid.Column="1" Background="Beige" />
+        <myUserControl01:Window4UserControl1 x:Name="UserControl1" Grid.Row="1" Grid.Column="1" OrderPlaced="UserControl1_OrderPlaced" Loaded="UserControl1_Loaded" />
+        <Label x:Name="lblResult" Margin="5,5,5,5" Grid.Row="2" Grid.Column="1" Background="CadetBlue" />
+        <Button Content="hi" Grid.Row="3" Grid.Column="1" Width="Auto" Height="Auto" Background="Aqua"/>
+    </Grid>
+</Window>

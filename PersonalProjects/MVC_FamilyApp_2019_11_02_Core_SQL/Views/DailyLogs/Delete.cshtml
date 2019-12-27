@@ -1,0 +1,87 @@
+﻿@model MVC_FamilyApp_2019_11_02_Core_SQL.DailyLog
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DailyLog</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LogDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LogDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpOnTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpOnTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StayedUp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StayedUp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MadeGym)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MadeGym)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrWthFam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrWthFam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrWthZ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrWthZ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CrsPryPhoto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CrsPryPhoto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhilPryPhoto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhilPryPhoto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CrsDeskPhoto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CrsDeskPhoto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NbrSns)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NbrSns)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="DailyLogId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+﻿@page
+@model Entity04_Add_CustomerModel
+@{
+}
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers;
+<h2>@ViewData["Title"]</h2>
+<ol>
+    @foreach(ASPCoreEntity_03_Data.Customer customer in Model.Customers)
+    {
+        <li>@customer.CustomerID - @customer.ContactName - @customer.City - @customer.CompanyName</li>
+
+    }
+</ol>
+
+<div class="row">
+    <p>Add a new customer</p>
+    <form method="POST">
+        <div><input asp-for="customer.CustomerID" /></div>
+        <div><input asp-for="customer.ContactName" /></div>
+        <div><input asp-for="customer.CompanyName" /></div>
+        <input type="submit" />
+    </form>
+</div>

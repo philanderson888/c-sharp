@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ASP_MVC_03.Models.Test>
+
+@{
+    ViewBag.Title = "View3";
+}
+
+<h2>View3</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TestName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TestId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TestId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TestId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TestId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestName)
+
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestName)
+            </td>
+        </tr>
+    }
+</table>
+
+
+<ul>
+@foreach (var item in Model)
+{
+    <li>@item.TestId -- @item.TestName</li>
+}
+</ul>

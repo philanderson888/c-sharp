@@ -1,0 +1,60 @@
+﻿@model FamilyApp_2019_10_12.DadDailyItem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DadDailyItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TodaysDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TodaysDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpOnTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpOnTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GetEarlyTrain)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GetEarlyTrain)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CallPhilip550)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CallPhilip550)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CallChrista550)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CallChrista550)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkAtFinsburyPark)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkAtFinsburyPark)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HitTheGym)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HitTheGym)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DadDailyItemId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

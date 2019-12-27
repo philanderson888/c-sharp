@@ -1,0 +1,44 @@
+﻿@page
+@model ContosoUniversity.Pages.Rooms.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Room</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Room.RoomName" class="control-label"></label>
+                <input asp-for="Room.RoomName" class="form-control" />
+                <span asp-validation-for="Room.RoomName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.OpenTime" class="control-label"></label>
+                <input asp-for="Room.OpenTime" class="form-control" />
+                <span asp-validation-for="Room.OpenTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.CloseTime" class="control-label"></label>
+                <input asp-for="Room.CloseTime" class="form-control" />
+                <span asp-validation-for="Room.CloseTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
