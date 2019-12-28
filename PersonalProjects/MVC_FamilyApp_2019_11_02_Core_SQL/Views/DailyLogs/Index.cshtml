@@ -54,13 +54,13 @@
 <!-- #endregion Stats On Last 7 Days-->
 <!-- #region Display Stats On Last 14 Days -->
 <h3>
-    Number of successful getting up properly in last 14 days is @ViewBag.countUpOnTimeInLast14Days / 14 which is a percentage of @ViewBag.percentageUpOnTimeInLast7Days%.
+    Number of successful getting up properly in last 14 days is @ViewBag.countUpOnTimeInLast14Days / 14 which is a percentage of @ViewBag.percentageUpOnTimeInLast14Days%.
     @{
         if (@ViewBag.countUpOnTimeInLast14Days >= 12)
         {
         <span>  Amazing !!! Well done !!! This is really excellent !!!!</span>
         }
-        else if (@ViewBag.countUpOnTimeInLast7Days >= 10)
+        else if (@ViewBag.countUpOnTimeInLast14Days >= 10)
         {
         <span>  Pretty good !!! But partial obedience is still not obedience !!! Press through all of the lies and press towards the prize for the higher calling in Christ!!!  God is looking for devoted servants who will serve Him night and day</span>
         }
