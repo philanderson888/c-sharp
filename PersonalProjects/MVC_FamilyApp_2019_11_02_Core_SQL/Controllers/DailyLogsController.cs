@@ -83,6 +83,18 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             int totalCountOfAllStatsFromTheBeginning = dataSet.Where(log => log.UpOnTime == true).Count();
             ViewBag.allTimePercentageSuccess = (int)(totalCountOfAllStatsFromTheBeginning / (double)dataSet.Count() * 100);
             #endregion
+            #region Mess Around With Passwords And The Password Hash
+            string Base64HashStraightFromDatabase = user.PasswordHash;
+            byte[] passwordHashRawByteArray = Convert.FromBase64String(Base64HashStraightFromDatabase);
+            string passwordStringFromRawByteArray = string.Join(',', passwordHashRawByteArray);           
+            ViewBag.Base64HashStraightFromDatabase = Base64HashStraightFromDatabase;
+            ViewBag.passwordStringFromRawByteArray = passwordStringFromRawByteArray;
+            #region Now Split The Byte Array Apart
+            ViewBag.ByteZero = passwordHashRawByteArray[0].ToString();
+            ViewBag.ByteFour = passwordHashRawByteArray[4].ToString();
+            ViewBag.Iterations = "";
+            #endregion
+            #endregion
             return View(dataSet);
         }
         #endregion

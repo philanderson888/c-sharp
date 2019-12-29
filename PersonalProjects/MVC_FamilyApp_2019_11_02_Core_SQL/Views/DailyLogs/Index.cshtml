@@ -95,6 +95,20 @@ else
     All time percentage success for all records since the start of time is @ViewBag.AllTimePercentageSuccess%
 </h3>
 <!-- #endregion -->
+<!-- #region Messing Around With Passwords -->
+<h3>
+    Raw Base64 Password Hash String From The Database is @ViewBag.Base64HashStraightFromDatabase
+</h3>
+<h3>
+    Converted to byte array this yields @ViewBag.passwordStringFromRawByteArray
+</h3>
+<h3>
+    First Byte is @ViewBag.FirstByte which means it's the latest version of hashing
+</h3>
+<h3>
+    ... more on this exciting topic later!
+</h3>
+<!-- #endregion -->
 <!-- #region New Log -->
 <p>
     <a asp-action="Create">Create New</a>
