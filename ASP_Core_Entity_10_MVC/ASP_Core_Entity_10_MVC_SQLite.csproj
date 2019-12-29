@@ -6,7 +6,7 @@
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'ASP_Core_Entity_10_MVC' ">
     <StartAction>Project</StartAction>
-    <ApplicationURL>https://localhost:5001;http://localhost:5000</ApplicationURL>
+    <ApplicationURL>http://localhost:5000</ApplicationURL>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App">
