@@ -4,12 +4,19 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'ASPCoreEntiry_03_VS_SQL' ">
+    <StartAction>Project</StartAction>
+    <LaunchUrl>api/values</LaunchUrl>
+    <ApplicationURL>http://localhost:16825/</ApplicationURL>
+  </PropertyGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9"><PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+<Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+</PackageReference>
   </ItemGroup>
 
   <ItemGroup>

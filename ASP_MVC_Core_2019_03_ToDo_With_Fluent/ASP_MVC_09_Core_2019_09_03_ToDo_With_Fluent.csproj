@@ -4,9 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'ASP_Core_Entity_10_MVC' ">
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'MVC_2019_03_ToDo_With_Fluent' ">
     <StartAction>Project</StartAction>
-    <ApplicationURL>http://localhost:5000</ApplicationURL>
+    <ApplicationURL>https://localhost:5001;http://localhost:5000</ApplicationURL>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App">
@@ -14,12 +14,6 @@
       <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.8" />
-    <PackageReference Include="Bower" Version="1.3.11" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Customers\" />
-    <Folder Include="Views\Customers\" />
-  </ItemGroup>
 </Project>

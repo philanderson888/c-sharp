@@ -54,13 +54,13 @@
 <!-- #endregion Stats On Last 7 Days-->
 <!-- #region Display Stats On Last 14 Days -->
 <h3>
-    Number of successful getting up properly in last 14 days is @ViewBag.countUpOnTimeInLast14Days / 14 which is a percentage of @ViewBag.percentageUpOnTimeInLast7Days%.
+    Number of successful getting up properly in last 14 days is @ViewBag.countUpOnTimeInLast14Days / 14 which is a percentage of @ViewBag.percentageUpOnTimeInLast14Days%.
     @{
         if (@ViewBag.countUpOnTimeInLast14Days >= 12)
         {
         <span>  Amazing !!! Well done !!! This is really excellent !!!!</span>
         }
-        else if (@ViewBag.countUpOnTimeInLast7Days >= 10)
+        else if (@ViewBag.countUpOnTimeInLast14Days >= 10)
         {
         <span>  Pretty good !!! But partial obedience is still not obedience !!! Press through all of the lies and press towards the prize for the higher calling in Christ!!!  God is looking for devoted servants who will serve Him night and day</span>
         }
@@ -95,6 +95,7 @@ else
     All time percentage success for all records since the start of time is @ViewBag.AllTimePercentageSuccess%
 </h3>
 <!-- #endregion -->
+<<<<<<< HEAD
 <!-- #region Messing Around With Passwords -->
 <h3>
     Raw Base64 Password Hash String From The Database is @ViewBag.Base64HashStraightFromDatabase
@@ -109,6 +110,28 @@ else
     ... more on this exciting topic later!
 </h3>
 <!-- #endregion -->
+=======
+<!-- #region ExtraComments-->
+<h3>
+    Family Peace
+</h3>
+<p>
+    'Sh' with my finger and wait 10 seconds.  Have peace in the meetings.  Never argue in front of the group.
+</p>
+<h3>
+    Family Management - Meetings
+</h3>
+<p>
+    Thought for mum - If you promise to speak no words then I will promise to keep the meeting below five minutes
+</p>
+<h3>
+    Presentation Of The Gospel
+</h3>
+<p>
+    Why don't you set out to present the 'worst' ever presentation of the Gospel?  Then you can't complain if it's bad!  I think you'll do really good actually at presenting really well so don't be afraid of perfection - aim for the worst possible presentation of the Gospel and you will achieve far higher.
+</p>
+<!-- #endregion Extra Comments-->
+>>>>>>> dbeb6a50ea8964238e607ab99f94b0754a417b33
 <!-- #region New Log -->
 <p>
     <a asp-action="Create">Create New</a>

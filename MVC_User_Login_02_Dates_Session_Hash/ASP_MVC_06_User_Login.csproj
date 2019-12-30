@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,17 +8,17 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7850B842-2D6D-4113-912B-EF4D1F4E15B2}</ProjectGuid>
+    <ProjectGuid>{5D6CED7E-AFF2-44AA-8F32-8AA78D7AB3FF}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ASP_Entity_Northwind_01</RootNamespace>
-    <AssemblyName>ASP_Entity_Northwind_01</AssemblyName>
+    <RootNamespace>MVC_User_Login</RootNamespace>
+    <AssemblyName>MVC_User_Login</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44322</IISExpressSSLPort>
+    <IISExpressSSLPort>44392</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -74,7 +74,7 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -82,180 +82,84 @@
     </Reference>
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
-      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alphabetical_list_of_product.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Category.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Category_Sales_for_1997.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\OrdersController.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Course.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Current_Product_List.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerDemographic.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customer_and_Suppliers_by_City.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustOrderHist_Result.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustOrdersDetail_Result.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustOrdersOrders_Result.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employee.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employee_Sales_by_Country_Result.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\Users1Controller.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Invoice.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    <Compile Include="Migrations\201908110639442_initial.cs" />
+    <Compile Include="Migrations\201908110639442_initial.Designer.cs">
+      <DependentUpon>201908110639442_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.Context.tt</DependentUpon>
+    <Compile Include="Migrations\201908110702190_seed.cs" />
+    <Compile Include="Migrations\201908110702190_seed.Designer.cs">
+      <DependentUpon>201908110702190_seed.cs</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    <Compile Include="Migrations\201908110743398_update-display-names.cs" />
+    <Compile Include="Migrations\201908110743398_update-display-names.Designer.cs">
+      <DependentUpon>201908110743398_update-display-names.cs</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+    <Compile Include="Migrations\201908111124104_password-validation.cs" />
+    <Compile Include="Migrations\201908111124104_password-validation.Designer.cs">
+      <DependentUpon>201908111124104_password-validation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    <Compile Include="Migrations\201908111623138_add-user-fields.cs" />
+    <Compile Include="Migrations\201908111623138_add-user-fields.Designer.cs">
+      <DependentUpon>201908111623138_add-user-fields.cs</DependentUpon>
     </Compile>
-    <Compile Include="Orders_Qry.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order_Detail.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order_Details_Extended.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order_Subtotal.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Products_Above_Average_Price.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Products_by_Category.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Product_Sales_for_1997.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserLoginContext.cs" />
+    <Compile Include="Models\UserLoginViewModel.cs" />
+    <Compile Include="Models\UserSessionData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Region.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SalesByCategory_Result.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sales_by_Category.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sales_by_Year_Result.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sales_Totals_by_Amount.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shipper.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Student.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Summary_of_Sales_by_Quarter.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Summary_of_Sales_by_Year.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Supplier.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ten_Most_Expensive_Products_Result.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Territory.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -266,25 +170,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="NorthwindModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>NorthwindModel.Context.cs</LastGenOutput>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="NorthwindModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-      <LastGenOutput>NorthwindModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="NorthwindModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NorthwindModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="NorthwindModel.edmx.diagram">
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-    </Content>
+    <Content Include="wwwroot\images\4k-golden-light-background-4_n1lbvdmve__F0000.png" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -307,28 +195,19 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Users\Login.cshtml" />
+    <Content Include="Views\Users\Register.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Customers\Create.cshtml" />
-    <Content Include="Views\Customers\Delete.cshtml" />
-    <Content Include="Views\Customers\Details.cshtml" />
-    <Content Include="Views\Customers\Edit.cshtml" />
-    <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Orders\Create.cshtml" />
-    <Content Include="Views\Orders\Delete.cshtml" />
-    <Content Include="Views\Orders\Details.cshtml" />
-    <Content Include="Views\Orders\Edit.cshtml" />
-    <Content Include="Views\Orders\Index.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users1\Create.cshtml" />
+    <Content Include="Views\Users1\Delete.cshtml" />
+    <Content Include="Views\Users1\Details.cshtml" />
+    <Content Include="Views\Users1\Edit.cshtml" />
+    <Content Include="Views\Users1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -344,7 +223,21 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201908110639442_initial.resx">
+      <DependentUpon>201908110639442_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908110702190_seed.resx">
+      <DependentUpon>201908110702190_seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908110743398_update-display-names.resx">
+      <DependentUpon>201908110743398_update-display-names.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908111124104_password-validation.resx">
+      <DependentUpon>201908111124104_password-validation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908111623138_add-user-fields.resx">
+      <DependentUpon>201908111623138_add-user-fields.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -362,9 +255,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>59054</DevelopmentServerPort>
+          <DevelopmentServerPort>54222</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44322/</IISUrl>
+          <IISUrl>https://localhost:44392/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -383,7 +276,7 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

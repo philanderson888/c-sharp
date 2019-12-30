@@ -2,14 +2,15 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'ASPCoreEntity_02_VS_SQL' ">
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'ASPEntityCore_05_Movie' ">
     <StartAction>Project</StartAction>
-    <ApplicationURL>http://localhost:10707/</ApplicationURL>
+    <ApplicationURL>http://localhost:26052/</ApplicationURL>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9"><PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8"><PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
 <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
 </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
