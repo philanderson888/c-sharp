@@ -41,7 +41,6 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             ViewBag.isAuthenticated = User.Identity.IsAuthenticated;
             ViewBag.Name = User.Identity.Name;
             ViewBag.AuthenticationType = User.Identity.AuthenticationType;
-            
             #endregion
             #region GetAndDisplayStatsForLast30Days
             List<DailyLog> dataSet = await _context.DailyLogs.Take(30).OrderByDescending(dl => dl.LogDate).ToListAsync();
@@ -89,11 +88,11 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             string passwordStringFromRawByteArray = string.Join(',', passwordHashRawByteArray);           
             ViewBag.Base64HashStraightFromDatabase = Base64HashStraightFromDatabase;
             ViewBag.passwordStringFromRawByteArray = passwordStringFromRawByteArray;
+            #endregion
             #region Now Split The Byte Array Apart
             ViewBag.ByteZero = passwordHashRawByteArray[0].ToString();
             ViewBag.ByteFour = passwordHashRawByteArray[4].ToString();
             ViewBag.Iterations = "";
-            #endregion
             #endregion
             return View(dataSet);
         }
