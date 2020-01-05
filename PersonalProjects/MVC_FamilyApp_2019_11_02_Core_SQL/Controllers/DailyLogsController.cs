@@ -77,6 +77,17 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             ViewBag.countUpOnTimeInLast14Days = countUpOnTimeInLast14Days;
             ViewBag.percentageUpOnTimeInLast14Days = (int)(countUpOnTimeInLast14Days / 14.0 * 100);
             #endregion
+            #region GetAndDisplayGymStats
+            int madeGymLast7Days = dataSetLast7Days.Where(log => log.MadeGym == true).Count();
+            int madeGymLast14Days = dataSetLast14Days.Where(log => log.MadeGym == true).Count();
+            int madeGymLast30Days = dataSet.Where(log => log.MadeGym == true).Count();
+            ViewBag.madeGymLast7Days = madeGymLast7Days;
+            ViewBag.madeGymLast14Days = madeGymLast14Days;
+            ViewBag.madeGymLast30Days = madeGymLast30Days;
+            ViewBag.percentageGymLast7Days = (int)(madeGymLast7Days / 7.0 * 100);
+            ViewBag.percentageGymLast14Days = (int)(madeGymLast14Days / 14.0 * 100);
+            ViewBag.percentageGymLast30Days = (int)(madeGymLast30Days / 30.0 * 100);
+            #endregion GetAndDisplayGymStats
             #region Temporary Extra Code To Put In Lines For Data Input
             dataSet = await _context.DailyLogs.OrderByDescending(log=>log.LogDate).ToListAsync();
             int totalCountOfAllStatsFromTheBeginning = dataSet.Where(log => log.UpOnTime == true).Count();
