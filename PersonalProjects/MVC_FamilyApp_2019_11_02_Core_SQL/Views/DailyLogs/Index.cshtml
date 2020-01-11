@@ -29,6 +29,24 @@
     Authentication Name is @ViewBag.Name
 </h2>
 <!-- #endregion Display User And Email Confirmed Status -->
+<!-- #region RandomThoughtsAndIdeas -->
+<h2>Ideas</h2>
+<ul>
+    @{
+        var random = new Random();
+
+    }
+    <li>
+        <h3>@ViewBag.ThoughtsAndIdeas[random.Next(ViewBag.ThoughtsAndIdeas.Count())]</h3>
+    </li>
+    <li>
+        <h3>@ViewBag.ThoughtsAndIdeas[random.Next(ViewBag.ThoughtsAndIdeas.Count())]</h3>
+    </li>
+    <li>
+        <h3>@ViewBag.ThoughtsAndIdeas[random.Next(ViewBag.ThoughtsAndIdeas.Count())]</h3>
+    </li>
+</ul>
+<!-- #endregion -->
 <!-- #region Display Stats -->
 <h2>Stats</h2>
 <!-- #region Display Stats On Run Of Recent Form -->
@@ -119,34 +137,7 @@ else
 </h3>
 <!-- #endregion -->
 <!-- #region ExtraComments-->
-<h3>To Do : Convert into a database!</h3>
-<p>Send Smson an email</p>
-<p>Buy one Spreadshirt this week</p>
-<p>Build randomisation of database ideas into this page</p>
-<p>BattlePhil </p>
-<h3>Ideas</h3>
-<p>Don't set the snooze button at all! 8/1/2020</p>
-<p>Set a deadline to QUIT work every day!</p>
-<p>Most efficient use of time - praying on stair master or running machine!</p>
 
-<h3>
-    Family Peace
-</h3>
-<p>
-    'Sh' with my finger and wait 10 seconds.  Have peace in the meetings.  Never argue in front of the group.
-</p>
-<h3>
-    Family Management - Meetings
-</h3>
-<p>
-    Thought for mum - If you promise to speak no words then I will promise to keep the meeting below five minutes
-</p>
-<h3>
-    Presentation Of The Gospel
-</h3>
-<p>
-    Why don't you set out to present the 'worst' ever presentation of the Gospel?  Then you can't complain if it's bad!  I think you'll do really good actually at presenting really well so don't be afraid of perfection - aim for the worst possible presentation of the Gospel and you will achieve far higher.
-</p>
 
 <!-- #endregion Extra Comments-->
 <!-- #region New Log -->

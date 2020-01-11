@@ -88,11 +88,24 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             ViewBag.percentageGymLast14Days = (int)(madeGymLast14Days / 14.0 * 100);
             ViewBag.percentageGymLast30Days = (int)(madeGymLast30Days / 30.0 * 100);
             #endregion GetAndDisplayGymStats
-            #region Temporary Extra Code To Put In Lines For Data Input
+            #region GetAndDisplayAllTimeStats
             dataSet = await _context.DailyLogs.OrderByDescending(log=>log.LogDate).ToListAsync();
             int totalCountOfAllStatsFromTheBeginning = dataSet.Where(log => log.UpOnTime == true).Count();
             ViewBag.allTimePercentageSuccess = (int)(totalCountOfAllStatsFromTheBeginning / (double)dataSet.Count() * 100);
             #endregion
+            #region displayRandomThoughtsAndIdeas
+            var ThoughtsAndIdeas = new List<String>();
+            ThoughtsAndIdeas.Add("Buy One Spreadshirt This Week 10 Jan");
+            ThoughtsAndIdeas.Add("Change my GamerID To BattlePhil");
+            ThoughtsAndIdeas.Add("Don't set the snooze button at all");
+            ThoughtsAndIdeas.Add("Set a deadline to QUIT WORKING every day");
+            ThoughtsAndIdeas.Add("Most efficient use of time - praying on Stair Master and Running Machine");
+            ThoughtsAndIdeas.Add("Family Peace 'sh' with my finger and wait 10 seconds.  Have peace in the meetings.  Never argue in front of the group");
+            ThoughtsAndIdeas.Add("If you promise to speak no words then I will promise to keep the meeting below 5 minutes");
+            ThoughtsAndIdeas.Add("Present the 'worst ever' presentation of the gospel in order to lose the 'fear of perfection'   Why don't you set out to present the 'worst' ever presentation of the Gospel?  Then you can't complain if it's bad!  I think you'll do really good actually at presenting really well so don't be afraid of perfection - aim for the worst possible presentation of the Gospel and you will achieve far higher.");
+            ViewBag.ThoughtsAndIdeasList = ThoughtsAndIdeas;
+            
+            #endregion displayRandomThoughtsAndIdeas
             #region Mess Around With Passwords And The Password Hash
             string Base64HashStraightFromDatabase = user.PasswordHash;
             byte[] passwordHashRawByteArray = Convert.FromBase64String(Base64HashStraightFromDatabase);
