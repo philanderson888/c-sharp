@@ -43,7 +43,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
 #else
              connectionString = Environment.GetEnvironmentVariable("APPSETTING_FamilyDatabase04");
 #endif
-            connectionString = Environment.GetEnvironmentVariable("APPSETTING_FamilyDatabase04");
+          
             services.AddDbContext<FamilyDbContext>(options => options.UseSqlServer(connectionString));
 
 
@@ -77,7 +77,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=DailyLogs}/{action=Index}/{id?}");
             });
         }
     }

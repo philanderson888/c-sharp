@@ -34,17 +34,12 @@
 <ul>
     @{
         var random = new Random();
+        var thoughtsAndIdeasList = (List<string>)ViewBag.ThoughtsAndIdeasList;
 
     }
-    <li>
-        <h3>@ViewBag.ThoughtsAndIdeas[random.Next(ViewBag.ThoughtsAndIdeas.Count())]</h3>
-    </li>
-    <li>
-        <h3>@ViewBag.ThoughtsAndIdeas[random.Next(ViewBag.ThoughtsAndIdeas.Count())]</h3>
-    </li>
-    <li>
-        <h3>@ViewBag.ThoughtsAndIdeas[random.Next(ViewBag.ThoughtsAndIdeas.Count())]</h3>
-    </li>
+    <li>@thoughtsAndIdeasList[random.Next(thoughtsAndIdeasList.Count())]</li>
+    <li>@thoughtsAndIdeasList[random.Next(thoughtsAndIdeasList.Count())]</li>
+    <li>@thoughtsAndIdeasList[random.Next(thoughtsAndIdeasList.Count())]</li>
 </ul>
 <!-- #endregion -->
 <!-- #region Display Stats -->
