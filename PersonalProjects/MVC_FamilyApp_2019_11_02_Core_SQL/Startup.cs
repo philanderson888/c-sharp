@@ -90,7 +90,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
         public int DailyLogId { get; set; }
         [Display(Name = "Date")]
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime LogDate { get; set; }
 
         public String Comments { get; set; }
@@ -103,6 +103,20 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
         public bool PhilPryPhoto { get; set; }
         public bool CrsDeskPhoto { get; set; }
         public int NbrSns { get; set; }
+        public int? NbrGrps { get; set; }
+        public bool GymCardio { get; set; }
+        public bool GymWeights { get; set; }
+        public bool GymSprints { get; set; }
+        public bool GymChest { get; set; }
+        public bool GymBack { get; set; }
+        public bool GymLegs { get; set; }
+        public bool GymBicep { get; set; }
+        public bool GymTricep { get; set; }
+        public bool GymShoulders { get; set; }
+        public bool GymClass { get; set; }
+        public bool GymDips { get; set; }
+        public bool GymPullUps { get; set; }
+        public bool GymPushUps { get; set; }
     }
     public class FamilyDbContext : IdentityDbContext
     {

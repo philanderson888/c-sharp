@@ -153,7 +153,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DailyLogId,LogDate,Comments,UpOnTime,StayedUp,MadeGym,PrWthFam,PrWthZ,CrsPryPhoto,PhilPryPhoto,CrsDeskPhoto,NbrSns")] DailyLog dailyLog)
+        public async Task<IActionResult> Create([Bind("DailyLogId,LogDate,Comments,UpOnTime,StayedUp,MadeGym,PrWthFam,PrWthZ,CrsPryPhoto,PhilPryPhoto,CrsDeskPhoto,NbrSns,NbrGrps,GymCardio,GymWeights,GymSprints,GymChest,GymBack,GymLegs,GymBicep,GymTricep,GymShoulders,GymClass,GymDips,GymPullUps,GymPushUps")] DailyLog dailyLog)
         {
             if (ModelState.IsValid)
             {
@@ -186,7 +186,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DailyLogId,LogDate,Comments,UpOnTime,StayedUp,MadeGym,PrWthFam,PrWthZ,CrsPryPhoto,PhilPryPhoto,CrsDeskPhoto,NbrSns")] DailyLog dailyLog)
+        public async Task<IActionResult> Edit(int id, [Bind("DailyLogId,LogDate,Comments,UpOnTime,StayedUp,MadeGym,PrWthFam,PrWthZ,CrsPryPhoto,PhilPryPhoto,CrsDeskPhoto,NbrSns,NbrGrps,GymCardio,GymWeights,GymSprints,GymChest,GymBack,GymLegs,GymBicep,GymTricep,GymShoulders,GymClass,GymDips,GymPullUps,GymPushUps")] DailyLog dailyLog)
         {
             if (id != dailyLog.DailyLogId)
             {

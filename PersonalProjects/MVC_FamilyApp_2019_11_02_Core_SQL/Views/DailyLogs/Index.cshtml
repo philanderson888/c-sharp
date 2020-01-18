@@ -181,6 +181,49 @@ else
             <th>
                 @Html.DisplayNameFor(model => model.NbrSns)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NbrGrps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymCardio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymWeights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymSprints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymChest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymBack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymLegs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymBicep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymTricep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymShoulders)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymClass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymDips)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymPullUps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymPushUps)
+            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -191,7 +234,7 @@ else
         {
         <tr>
             <td>
-                @{  @item.LogDate.ToString("ddd"); }
+                @{ @item.LogDate.ToString("ddd"); }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LogDate)
@@ -226,6 +269,48 @@ else
             <td>
                 @Html.DisplayFor(modelItem => item.NbrSns)
             </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.NbrGrps)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymCardio)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymWeights)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymSprints)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymChest)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymBack)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymLegs)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymBicep)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymTricep)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymShoulders)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymClass)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymDips)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymPullUps)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.GymPushUps)
+            </th>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.DailyLogId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.DailyLogId">Details</a> |

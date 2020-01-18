@@ -84,6 +84,102 @@
                 <span asp-validation-for="NbrSns" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="NbrGrps" class="control-label"></label>
+                <input asp-for="NbrGrps" class="form-control" />
+                <span asp-validation-for="NbrGrps" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymCardio" /> @Html.DisplayNameFor(model => model.GymCardio)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymWeights" /> @Html.DisplayNameFor(model => model.GymWeights)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymSprints" /> @Html.DisplayNameFor(model => model.GymSprints)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymChest" /> @Html.DisplayNameFor(model => model.GymChest)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymBack" /> @Html.DisplayNameFor(model => model.GymBack)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymLegs" /> @Html.DisplayNameFor(model => model.GymLegs)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymBicep" /> @Html.DisplayNameFor(model => model.GymBicep)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymTricep" /> @Html.DisplayNameFor(model => model.GymTricep)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymShoulders" /> @Html.DisplayNameFor(model => model.GymShoulders)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymClass" /> @Html.DisplayNameFor(model => model.GymClass)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymDips" /> @Html.DisplayNameFor(model => model.GymDips)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymPullUps" /> @Html.DisplayNameFor(model => model.GymPullUps)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GymPushUps" /> @Html.DisplayNameFor(model => model.GymPushUps)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
