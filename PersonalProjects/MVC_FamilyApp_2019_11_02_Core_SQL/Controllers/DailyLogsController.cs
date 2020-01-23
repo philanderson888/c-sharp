@@ -103,6 +103,14 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             ThoughtsAndIdeas.Add("Family Peace 'sh' with my finger and wait 10 seconds.  Have peace in the meetings.  Never argue in front of the group");
             ThoughtsAndIdeas.Add("If you promise to speak no words then I will promise to keep the meeting below 5 minutes");
             ThoughtsAndIdeas.Add("Present the 'worst ever' presentation of the gospel in order to lose the 'fear of perfection'   Why don't you set out to present the 'worst' ever presentation of the Gospel?  Then you can't complain if it's bad!  I think you'll do really good actually at presenting really well so don't be afraid of perfection - aim for the worst possible presentation of the Gospel and you will achieve far higher.");
+            ThoughtsAndIdeas.Add("Get out of work early!");
+            ThoughtsAndIdeas.Add("Tell people who ask - 'God told me to get up early and pray before I go to the gym so I do that for 40 minutes from 430 to 510am'");
+            ThoughtsAndIdeas.Add("Pray for Kate at the gym - small, quiet and friendly");
+            ThoughtsAndIdeas.Add("I can communicate with Jonathan via video on YouTube to Email");
+            ThoughtsAndIdeas.Add("Remove all the coats from all the hooks and replace them");
+            ThoughtsAndIdeas.Add("I can communicate with Mark via phone voicemail also Skype voicemail also email - lots of ways");
+            ThoughtsAndIdeas.Add("I can communicate with Michael via phone, leave voicemail on Sunday morning, email and letter");
+            ThoughtsAndIdeas.Add("Idea for all kids - have a single number which is the combined score on my database!");
             ViewBag.ThoughtsAndIdeasList = ThoughtsAndIdeas;
             
             #endregion displayRandomThoughtsAndIdeas
