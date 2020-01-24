@@ -121,6 +121,52 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
 
         public bool WlkRndOffc { get; set; }
     }
+
+    public class GymLog
+    {
+        [Key]
+        public int GymLogId { get; set; }
+        [Display(Name="Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime GymLogDate { get; set; }
+
+        public int? UserId { get; set; }
+        public User User { get; set; }
+
+        public int? WorkoutTypeId { get; set; }
+        public WorkoutType WorkoutType { get; set; }
+    }
+
+    public class User
+    {
+        [Key]
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+    }
+
+    public class Exercise
+    {
+        public int ExerciseId { get; set; }
+        public string ExerciseName { get; set; }
+
+        public int? ExerciseCategoryId { get; set; }
+        public  ExerciseCategory ExerciseCategory { get; set; }
+    }
+
+    public class WorkoutType
+    {
+        public int WorkoutTypeId { get; set; }
+        public string WorkoutTypeName { get; set; }
+    }
+
+    public class ExerciseCategory
+    {
+        public int ExerciseCategoryId { get; set; }
+        public string ExerciseCategoryName { get; set; }
+    }
+
+
     public class FamilyDbContext : IdentityDbContext
     {
         public FamilyDbContext(DbContextOptions<FamilyDbContext> options)

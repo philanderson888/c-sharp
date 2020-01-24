@@ -149,6 +149,9 @@ else
                 Day
             </th>
             <th>
+                Edit
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.LogDate)
             </th>
             <th>
@@ -241,98 +244,103 @@ else
         {
         <tr>
             <td>
-                @{  @item.LogDate.ToString("ddd"); }
+                @{ @item.LogDate.ToString("ddd"); }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LogDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comments)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpOnTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StayedUp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MadeGym)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrWthFam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrWthZ)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CrsPryPhoto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhilPryPhoto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CrsDeskPhoto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NbrSns)
-            </td>
-            <th>
-                @Html.DisplayFor(modelItem => item.NbrGrps)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymCardio)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymWeights)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymSprints)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymChest)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymBack)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymLegs)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymBicep)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymTricep)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymShoulders)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymClass)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymDips)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymPullUps)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.GymPushUps)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.WlkRndOffc)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.NmbrPrtnScps)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.SnkCln)
-            </th>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DailyLogId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DailyLogId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DailyLogId">Delete</a>
-            </td>
-        </tr>
+                @{
+                    <a asp-action="Edit" asp-route-id="@item.DailyLogId">Edit</a> |
+                }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comments)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpOnTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StayedUp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MadeGym)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrWthFam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrWthZ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CrsPryPhoto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhilPryPhoto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CrsDeskPhoto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NbrSns)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.NbrGrps)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymCardio)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymWeights)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymSprints)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymChest)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymBack)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymLegs)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymBicep)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymTricep)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymShoulders)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymClass)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymDips)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymPullUps)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.GymPushUps)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.WlkRndOffc)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.NmbrPrtnScps)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.SnkCln)
+                </th>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.DailyLogId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.DailyLogId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.DailyLogId">Delete</a>
+                </td>
+            </tr>
         }
     </tbody>
     <!-- #endregion Table Header -->
