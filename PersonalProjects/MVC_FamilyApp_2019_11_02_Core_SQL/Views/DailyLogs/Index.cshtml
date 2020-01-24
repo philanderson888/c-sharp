@@ -223,8 +223,15 @@ else
             <th>
                 @Html.DisplayNameFor(model => model.GymPushUps)
             </th>
-
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.WlkRndOffc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NmbrPrtnScps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SnkCln)
+            </th>
         </tr>
     </thead>
     <!-- #endregion Table Header -->
@@ -234,7 +241,7 @@ else
         {
         <tr>
             <td>
-                @{ @item.LogDate.ToString("ddd"); }
+                @{  @item.LogDate.ToString("ddd"); }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LogDate)
@@ -310,6 +317,15 @@ else
             </th>
             <th>
                 @Html.DisplayFor(modelItem => item.GymPushUps)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.WlkRndOffc)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.NmbrPrtnScps)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.SnkCln)
             </th>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.DailyLogId">Edit</a> |

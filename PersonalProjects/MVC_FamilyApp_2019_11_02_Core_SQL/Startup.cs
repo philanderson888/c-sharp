@@ -1,4 +1,5 @@
-﻿using System;
+﻿//#define DEBUG
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -43,7 +44,7 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
 #else
              connectionString = Environment.GetEnvironmentVariable("APPSETTING_FamilyDatabase04");
 #endif
-            connectionString = Environment.GetEnvironmentVariable("APPSETTING_FamilyDatabase04");
+          
             services.AddDbContext<FamilyDbContext>(options => options.UseSqlServer(connectionString));
 
 
@@ -66,13 +67,9 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
-
             app.UseAuthentication();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -117,6 +114,12 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL
         public bool GymDips { get; set; }
         public bool GymPullUps { get; set; }
         public bool GymPushUps { get; set; }
+
+        public int? NmbrPrtnScps { get; set; }
+
+        public bool SnkCln { get; set; }
+
+        public bool WlkRndOffc { get; set; }
     }
     public class FamilyDbContext : IdentityDbContext
     {
