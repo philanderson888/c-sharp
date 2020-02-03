@@ -112,6 +112,10 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             ThoughtsAndIdeas.Add("I can communicate with Mark via phone voicemail also Skype voicemail also email - lots of ways");
             ThoughtsAndIdeas.Add("I can communicate with Michael via phone, leave voicemail on Sunday morning, email and letter");
             ThoughtsAndIdeas.Add("Idea for all kids - have a single number which is the combined score on my database!");
+            ThoughtsAndIdeas.Add("Weekly - Write down everything in my tub");
+            ThoughtsAndIdeas.Add("Weekly - Write down all emails/texts/whatsapp");
+            ThoughtsAndIdeas.Add("Weekly - Write down all todo items");
+
             ViewBag.ThoughtsAndIdeasList = ThoughtsAndIdeas;
 
             #endregion displayRandomThoughtsAndIdeas
