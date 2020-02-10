@@ -12,7 +12,7 @@ namespace EFCore_10
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer("Data Source = (localdb)\\mssqllocaldb;Initial Catalog = UserDatabase01");
+            builder.UseSqlServer("Data Source = (localdb)\\mssqllocaldb;Initial Catalog = UserDatabase03");
             //builder.UseSqlite("Data Source = UsersAndCategories.db");
         }
     }
