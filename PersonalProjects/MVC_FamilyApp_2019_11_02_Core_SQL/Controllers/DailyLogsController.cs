@@ -100,7 +100,6 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             ThoughtsAndIdeas.Add("Present the 'worst ever' presentation of the gospel in order to lose the 'fear of perfection'   Why don't you set out to present the 'worst' ever presentation of the Gospel?  Then you can't complain if it's bad!  I think you'll do really good actually at presenting really well so don't be afraid of perfection - aim for the worst possible presentation of the Gospel and you will achieve far higher.");
             ThoughtsAndIdeas.Add("Get out of work early!");
             ThoughtsAndIdeas.Add("Tell people who ask - 'God told me to get up early and pray before I go to the gym so I do that for 40 minutes from 430 to 510am'");
-            ThoughtsAndIdeas.Add("Pray for Kate at the gym - small, quiet and friendly");
             ThoughtsAndIdeas.Add("I can communicate with Jonathan via video on YouTube to Email");
             ThoughtsAndIdeas.Add("Remove all the coats from all the hooks and replace them");
             ThoughtsAndIdeas.Add("I can communicate with Mark via phone voicemail also Skype voicemail also email - lots of ways");
@@ -109,6 +108,9 @@ namespace MVC_FamilyApp_2019_11_02_Core_SQL.Controllers
             ThoughtsAndIdeas.Add("Weekly - Write down everything in my tub");
             ThoughtsAndIdeas.Add("Weekly - Write down all emails/texts/whatsapp");
             ThoughtsAndIdeas.Add("Weekly - Write down all todo items");
+            ThoughtsAndIdeas.Add("You have to be prepared to be at the front!");
+            ThoughtsAndIdeas.Add("Give blood one Friday and rest for the weekend!");
+
 
             ViewBag.ThoughtsAndIdeasList = ThoughtsAndIdeas;
 
