@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+//using System.Data.Entity;
 using System.Linq;
 
 namespace Entity_From_Code_01
@@ -11,52 +11,52 @@ namespace Entity_From_Code_01
         {
 
 
-            using (var db = new SchoolContext())
-            {
-                var students = db.Students.ToList();
+            //using (var db = new SchoolContext())
+            //{
+            //    var students = db.Students.ToList();
 
-                foreach(var s in students)
-                {
-                    Console.WriteLine($"{s.StudentID} has name {s.StudentName}");
-                }
+            //    foreach(var s in students)
+            //    {
+            //        Console.WriteLine($"{s.StudentID} has name {s.StudentName}");
+            //    }
 
-            }
+            //}
 
-            using (var db = new SchoolContext())
-            {
-                var stud = new Student() { StudentName = "Bill" };
+            //using (var db = new SchoolContext())
+            //{
+            //    var stud = new Student() { StudentName = "Bill" };
 
-                db.Students.Add(stud);
-                db.SaveChanges();
-            }
+            //    db.Students.Add(stud);
+            //    db.SaveChanges();
+            //}
 
 
 
             Console.WriteLine("Done");
 
-            using (var db = new SchoolContext())
-            {
-                var students = db.Students.ToList();
+            //using (var db = new SchoolContext())
+            //{
+            //    var students = db.Students.ToList();
 
-                foreach (var s in students)
-                {
-                    Console.WriteLine($"{s.StudentID} has name {s.StudentName}");
-                }
+            //    foreach (var s in students)
+            //    {
+            //        Console.WriteLine($"{s.StudentID} has name {s.StudentName}");
+            //    }
 
-            }
+            //}
         }
     }
 
-    public class SchoolContext : DbContext
-    {
-        public SchoolContext() : base("StudentDatabase01")
-        {
+    //public class SchoolContext : DbContext
+    //{
+    //    public SchoolContext() : base("StudentDatabase01")
+    //    {
 
-        }
+    //    }
 
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Grade> Grades { get; set; }
-    }
+    //    public DbSet<Student> Students { get; set; }
+    //    public DbSet<Grade> Grades { get; set; }
+    //}
 
     public class Student
     {

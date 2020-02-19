@@ -1,7 +1,6 @@
     using System;
     using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Collections.Generic;
+    //using System.Data.Entity;
 
 
     namespace Entity_Migration_01
@@ -12,50 +11,50 @@
             {
 
                 Console.WriteLine("\n\nAdd new student\n");
-                using (var db = new SchoolContext())
-                {
-                    var student = new Student()
-                    {
-                        StudentName = "Bob"
-                    };
-                    var test = new Test() {
-                        TestName = "test name",
-                        AddThisOn = "add some data here"
+                //using (var db = new SchoolContext())
+                //{
+                //    var student = new Student()
+                //    {
+                //        StudentName = "Bob"
+                //    };
+                //    var test = new Test() {
+                //        TestName = "test name",
+                //        AddThisOn = "add some data here"
                         
-                    };
+                //    };
 
-                    db.Students.Add(student);
-                    db.Tests.Add(test);
+                //    db.Students.Add(student);
+                //    db.Tests.Add(test);
 
-                    db.SaveChanges();           
-                }
+                //    db.SaveChanges();           
+                //}
 
             
                 Console.WriteLine("\n\nCheck record has been added");
-                using(var db = new SchoolContext())
-                {
-                    foreach(Student s in db.Students)
-                    {
-                        Console.WriteLine(s.StudentName);
-                    }
-                    foreach (Test t in db.Tests)
-                    {
-                        Console.WriteLine(t.TestName);
-                    Console.WriteLine(t.AddThisOn);
-                    }
-                }
+                //using(var db = new SchoolContext())
+                //{
+                //    foreach(Student s in db.Students)
+                //    {
+                //        Console.WriteLine(s.StudentName);
+                //    }
+                //    foreach (Test t in db.Tests)
+                //    {
+                //        Console.WriteLine(t.TestName);
+                //    Console.WriteLine(t.AddThisOn);
+                //    }
+                //}
             }
         }
 
-        public class SchoolContext : DbContext
-        {
-            public SchoolContext() : base("StudentDatabase04"){
-                Database.SetInitializer(new MigrateDatabaseToLatestVersion<SchoolContext, Entity_Migration_01.Migrations.Configuration>());
-            }
-            public DbSet<Student> Students { get; set; }
-            public DbSet<Grade> Grades { get; set; }
-            public DbSet<Test> Tests { get; set; }
-        }
+        //public class SchoolContext : DbContext
+        //{
+        //    public SchoolContext() : base("StudentDatabase04"){
+        //        Database.SetInitializer(new MigrateDatabaseToLatestVersion<SchoolContext, Entity_Migration_01.Migrations.Configuration>());
+        //    }
+        //    public DbSet<Student> Students { get; set; }
+        //    public DbSet<Grade> Grades { get; set; }
+        //    public DbSet<Test> Tests { get; set; }
+        //}
 
         public class Student
         {
