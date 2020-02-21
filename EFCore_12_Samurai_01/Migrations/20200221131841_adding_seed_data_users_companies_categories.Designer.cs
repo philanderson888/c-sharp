@@ -4,14 +4,16 @@ using EFCore_12_Samurai_01.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EFCore_12_Samurai_01.Migrations
 {
     [DbContext(typeof(UserDatabaseContext))]
-    partial class UserDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20200221131841_adding_seed_data_users_companies_categories")]
+    partial class adding_seed_data_users_companies_categories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

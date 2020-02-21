@@ -4,14 +4,16 @@ using EFCore_12_Samurai_01.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EFCore_12_Samurai_01.Migrations
 {
     [DbContext(typeof(UserDatabaseContext))]
-    partial class UserDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20200220133657_adding_migration_data_2")]
+    partial class adding_migration_data_2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,23 +66,6 @@ namespace EFCore_12_Samurai_01.Migrations
                     b.HasKey("CompanyId");
 
                     b.ToTable("Companies");
-
-                    b.HasData(
-                        new
-                        {
-                            CompanyId = 1,
-                            CompanyName = "Sparta"
-                        },
-                        new
-                        {
-                            CompanyId = 2,
-                            CompanyName = "BBC"
-                        },
-                        new
-                        {
-                            CompanyId = 3,
-                            CompanyName = "ITV"
-                        });
                 });
 
             modelBuilder.Entity("EFCore_12_Samurai_01.Models.FirstModel", b =>
@@ -128,23 +113,6 @@ namespace EFCore_12_Samurai_01.Migrations
                     b.HasIndex("SecondModelId");
 
                     b.ToTable("JoiningTable");
-
-                    b.HasData(
-                        new
-                        {
-                            FirstModelId = 1,
-                            SecondModelId = 1
-                        },
-                        new
-                        {
-                            FirstModelId = 2,
-                            SecondModelId = 2
-                        },
-                        new
-                        {
-                            FirstModelId = 3,
-                            SecondModelId = 3
-                        });
                 });
 
             modelBuilder.Entity("EFCore_12_Samurai_01.Models.MainItem", b =>
@@ -212,13 +180,6 @@ namespace EFCore_12_Samurai_01.Migrations
                     b.HasKey("SubItemId");
 
                     b.ToTable("SubItems");
-
-                    b.HasData(
-                        new
-                        {
-                            SubItemId = 1,
-                            SubItemName = "some sub item name"
-                        });
                 });
 
             modelBuilder.Entity("EFCore_12_Samurai_01.Models.Testing", b =>
@@ -259,29 +220,6 @@ namespace EFCore_12_Samurai_01.Migrations
                     b.HasIndex("CompanyId");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            CategoryId = 1,
-                            CompanyId = 1,
-                            UserName = "Bob"
-                        },
-                        new
-                        {
-                            UserId = 2,
-                            CategoryId = 2,
-                            CompanyId = 2,
-                            UserName = "Tim"
-                        },
-                        new
-                        {
-                            UserId = 3,
-                            CategoryId = 3,
-                            CompanyId = 3,
-                            UserName = "Joe"
-                        });
                 });
 
             modelBuilder.Entity("EFCore_12_Samurai_01.Models.FirstModelSecondModelJoiningTable", b =>

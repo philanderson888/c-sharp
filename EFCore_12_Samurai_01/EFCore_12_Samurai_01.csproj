@@ -11,6 +11,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="microsoft.extensions.logging.console" Version="3.1.2" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties efpt_1config_1json__JsonSchema="http://json.schemastore.org/bootstraprc" /></VisualStudio></ProjectExtensions>

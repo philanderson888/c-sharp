@@ -16,18 +16,18 @@ namespace EFCore_11_Create_Database
         {
             using (var db = new UserDatabaseContext())
             {
-                db.Database.EnsureDeleted();
-                db.Database.EnsureCreated();
-                var category1 = new Category() { CategoryName = "Admin" };
-                var category2 = new Category() { CategoryName = "User" };
-                var category3 = new Category() { CategoryName = "Personal" };
+                //db.Database.EnsureDeleted();
+                //db.Database.EnsureCreated();
+                //var category1 = new Category() { CategoryName = "Admin" };
+                //var category2 = new Category() { CategoryName = "User" };
+                //var category3 = new Category() { CategoryName = "Personal" };
                 var company1 = new Company() { CompanyName = "Sparta" };
                 var company2 = new Company() { CompanyName = "Three" };
                 var company3 = new Company() { CompanyName = "BBC" };
                 var user1 = new User() { UserName = "Fred", CategoryId = 1, CompanyId = 1 };
                 var user2 = new User() { UserName = "Bob", CategoryId = 2, CompanyId = 2 };
                 var user3 = new User() { UserName = "Tim", CategoryId = 3, CompanyId = 3 };
-                db.Categories.AddRange(category1, category2, category3);
+               // db.Categories.AddRange(category1, category2, category3);
                 db.Companies.AddRange(company1, company2, company3);
                 db.Users.AddRange(user1, user2, user3);
                 db.SaveChanges();

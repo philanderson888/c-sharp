@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace EFCore_12_Samurai_01.Models
 {
-    public partial class Users
+    public partial class User
     {
         public int UserId { get; set; }
         public string UserName { get; set; }
         public int? CategoryId { get; set; }
         public int? CompanyId { get; set; }
 
-        public virtual Categories Category { get; set; }
-        public virtual Companies Company { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual Company Company { get; set; }
     }
 }

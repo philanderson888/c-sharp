@@ -14,11 +14,19 @@
    "Tables": [
       {
          "HasPrimaryKey": true,
+         "Name": "[dbo].[__EFMigrationsHistory]"
+      },
+      {
+         "HasPrimaryKey": true,
          "Name": "[dbo].[Categories]"
       },
       {
          "HasPrimaryKey": true,
          "Name": "[dbo].[Companies]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Testings]"
       },
       {
          "HasPrimaryKey": true,
@@ -28,7 +36,7 @@
    "UseDatabaseNames": false,
    "UseFluentApiOnly": true,
    "UseHandleBars": false,
-   "UseInflector": false,
+   "UseInflector": true,
    "UseLegacyPluralizer": false,
    "UseSpatial": false
 }

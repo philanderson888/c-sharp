@@ -4,16 +4,16 @@ using System.Collections.Generic;
 
 namespace EFCore_12_Samurai_01.Models
 {
-    public partial class Companies
+    public partial class Company
     {
-        public Companies()
+        public Company()
         {
-            Users = new HashSet<Users>();
+            Users = new HashSet<User>();
         }
 
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
 
-        public virtual ICollection<Users> Users { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }
