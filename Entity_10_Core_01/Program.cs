@@ -2,6 +2,8 @@
 using static System.Console;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System;
 
 namespace EFCore_01_VS_SQL
 {
@@ -16,11 +18,22 @@ namespace EFCore_01_VS_SQL
         {
             using (var db = new Northwind())
             {
-                var categories = db.Categories.Include(category => category.Products);
-                foreach(Category c in categories)
+                var categories = 
+                    db.Categories
+                    .Where(c=>EF.Functions.Like(c.CategoryName,"a"))
+                    .Include(category => category.Products);
+                var categories2 =
+                    db.Categories
+                    .Where(c => c.CategoryName.Contains("a"));
+
+
+    
+
+                foreach (Category c in categories)
                 {
                     WriteLine($"{c.CategoryID}{c.CategoryName} has {c.Products.Count} products");
                 }
+
 
             }
         }
