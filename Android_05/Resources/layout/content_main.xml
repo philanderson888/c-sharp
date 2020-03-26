@@ -1,0 +1,391 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+
+
+  
+  
+<ScrollView 
+android:layout_width="fill_parent"
+android:layout_height="wrap_content">
+    
+
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+ 
+      
+        
+        <ImageView
+        android:id="@+id/image01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/spartaglobal"
+        android:maxWidth="50px" />
+
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Sparta Profiles"
+                android:textSize="@dimen/abc_text_size_headline_material"
+                android:textStyle="bold|italic" 
+                android:gravity="center"
+                />
+
+
+
+      
+
+
+    
+        <CheckBox android:id="@+id/checkbox01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="BA" />
+
+
+                    <CheckBox 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Devops" />
+
+
+        <CheckBox 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="SDET" />
+
+
+        <CheckBox 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Developer" />
+
+
+        <CheckBox 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Developer C#" />
+
+
+
+        <CheckBox 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Developer Java" />
+
+
+
+        <CheckBox 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Data" />
+
+
+
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:background="@drawable/myBorder"
+        android:layout_margin="10px"
+        android:padding="10px">
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Joe Bloggs"
+            android:textSize="@dimen/abc_text_size_headline_material"              />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="BSC BioMedical Science" />
+
+            <TextView
+      
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Loughborough University" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="C# Dev"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+            <ImageView
+            android:id="@+id/headshot01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/headshot01"
+            />
+
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="I am a hardworking and ambitious individual with a great passion for the transport and logistics industry. I am currently in my second year of studying BA Logistics and Supply Chain Management at Aston University. I have excellent communication skills, enabling me to effectively communicate with a wide range of people. I am seeing a part-time position in the industry in which I can put into practice my knowledge and experience, ultimately benefiting the operations of the organisation that I work for." />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:background="@drawable/myBorder"
+        android:layout_margin="10px"
+        android:padding="10px"
+        >
+
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Joe Bloggs"
+            android:textSize="@dimen/abc_text_size_headline_material"              />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="BSC BioMedical Science" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Loughborough University" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="C# Dev"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+            <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/headshot01"
+            />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="I am a hardworking and ambitious individual with a great passion for the transport and logistics industry. I am currently in my second year of studying BA Logistics and Supply Chain Management at Aston University. I have excellent communication skills, enabling me to effectively communicate with a wide range of people. I am seeing a part-time position in the industry in which I can put into practice my knowledge and experience, ultimately benefiting the operations of the organisation that I work for." />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:background="@drawable/myBorder"
+        android:layout_margin="10px"
+        android:padding="10px"
+        >
+
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Joe Bloggs"
+            android:textSize="@dimen/abc_text_size_headline_material"              />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="BSC BioMedical Science" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Loughborough University" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="C# Dev"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+            <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/headshot01"
+            />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="I am a hardworking and ambitious individual with a great passion for the transport and logistics industry. I am currently in my second year of studying BA Logistics and Supply Chain Management at Aston University. I have excellent communication skills, enabling me to effectively communicate with a wide range of people. I am seeing a part-time position in the industry in which I can put into practice my knowledge and experience, ultimately benefiting the operations of the organisation that I work for." />
+
+
+        </LinearLayout>
+
+      
+ 
+      
+
+
+
+
+
+        
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:background="@drawable/myBorder"
+        android:layout_margin="10px"
+        android:padding="10px"
+        >
+
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Joe Bloggs"
+            android:textSize="@dimen/abc_text_size_headline_material"              />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="BSC BioMedical Science" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Loughborough University" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="C# Dev"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+            <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/headshot01"
+            />
+
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="I am a hardworking and ambitious individual with a great passion for the transport and logistics industry. I am currently in my second year of studying BA Logistics and Supply Chain Management at Aston University. I have excellent communication skills, enabling me to effectively communicate with a wide range of people. I am seeing a part-time position in the industry in which I can put into practice my knowledge and experience, ultimately benefiting the operations of the organisation that I work for." />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:background="@drawable/myBorder"
+        android:layout_margin="10px"
+        android:padding="10px"
+        >
+
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Joe Bloggs"
+            android:textSize="@dimen/abc_text_size_headline_material"              />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="BSC BioMedical Science" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Loughborough University" />
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="C# Dev"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+            <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/headshot01"
+            />
+
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="I am a hardworking and ambitious individual with a great passion for the transport and logistics industry. I am currently in my second year of studying BA Logistics and Supply Chain Management at Aston University. I have excellent communication skills, enabling me to effectively communicate with a wide range of people. I am seeing a part-time position in the industry in which I can put into practice my knowledge and experience, ultimately benefiting the operations of the organisation that I work for." />
+
+
+        </LinearLayout>
+
+
+
+
+        <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            
+        />
+
+    </LinearLayout>
+
+  </ScrollView>
+
+
+  
+</RelativeLayout>
