@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xceed.Words.NET;
+
+
+
+
 
 
 
@@ -104,7 +100,7 @@ namespace Office_Export_01
             } 
             catch(Exception e)
             {
-
+                Console.WriteLine(e);
             }
 
         }

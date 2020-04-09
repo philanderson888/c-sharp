@@ -261,6 +261,15 @@ namespace DataTypes
 
 
 
+
+            string myNumberAsString2 = "45.23";
+            float myNumber2;
+            float.TryParse(myNumberAsString2, out myNumber2);
+            Console.WriteLine(myNumber2);
+            Console.WriteLine(myNumber2.GetType());
+
+
+
             Console.ReadLine();
 
 
