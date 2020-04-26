@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">All About Cookies</h1>
+</div>
+
+<div>
+    @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+    <h2>Cookie List</h2>
+    <ol>
+        @{
+            foreach (var cookie in HttpContextAccessor.HttpContext.Request.Cookies)
+            {
+                <li>
+                    Cookie
+                    <ul>
+                        <li>Key</li>
+                        <li> @cookie.Key</li>
+                        <li>Value</li>
+                        <li>@cookie.Value</li>
+                        <li>Options</li>
+                    </ul>
+                </li>
+            }
+        }
+    </ol>
+</div>
+<div id="cookies">
+    <script>
+        document.cookie += "testcookie=Phil Anderson";
+        document.cookie += "testcookie=Phil Anderson2; expires=Sat, 26 Apr 2020 15:00:00 UTC";
+        document.getElementById("cookies").innerHTML += '<p>This is a cookie</p>';
+        document.getElementById("cookies").innerHTML += '<p>' + document.cookie + '</p>';
+
+    </script>
+</div>

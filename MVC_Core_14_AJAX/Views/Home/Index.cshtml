@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<h2>Javascript Fetch</h2>
+<p><button class="btn btn-primary" id="load">Load</button></p>
+<div id="grid"></div>
+<div id="customer-list">Customer list</div>
+<div id="which-customer">
+    <button class="btn btn-primary customer" id="customer-0" value="0">0</button>
+    <button class="btn btn-primary customer" id="customer-1" value="1">1</button>
+    <button class="btn btn-primary customer" id="customer-2" value="2">2</button>
+    <div id="customer-data"></div>
+</div>
+@section scripts{
+    <script>
+        document.getElementById('load').addEventListener('click', () => {
+            fetch('https://raw.githubusercontent.com/philanderson888/data/master/customers.json')
+                .then((response) => {
+                    return response.text();
+                })
+                .then((result) => {
+                    document.getElementById('grid').innerHTML = result;
+                });
+        });
+
+
+
+
+
+        $(function () {
+
+            fetch('https://raw.githubusercontent.com/philanderson888/data/master/customers.json')
+                .then(
+                    function (response) {
+                        if (response.status !== 200) {
+                            console.log('Looks like there was a problem. Status Code: ' +
+                                response.status);
+                            return;
+                        }
+                        response.json().then(function (customers) {
+                            console.log(customers);
+                            customers.forEach(customer => {
+                                var item = `<li><strong>${customer.CustomerID} ${customer.CustomerName} ${customer.Address}</strong></li>`;
+                                $('#customer-list').append(item);
+                            });
+                        });
+                    }
+                )
+                .catch(function (err) {
+                    console.log('Fetch Error :-S', err);
+                });
+        });
+
+
+        function getCustomerData(event) {
+            console.log(event.type);
+            // return the ID of the button
+            console.log(event.target.value);
+            fetch('https://raw.githubusercontent.com/philanderson888/data/master/customers.json')
+                .then(
+                    function (response) {
+                        response.json()
+                            .then(function (customers) {
+                                var customer = customers[event.target.value];
+                                console.log('customer id = ' + customer.CustomerID);
+                                var item = `<li><strong>${customer.CustomerID} ${customer.CustomerName} ${customer.Address}</strong></li>`;
+                                $('#customer-data').append(item);
+                            });
+                    });  
+        }
+
+        var customerButtons = document.getElementsByClassName('customer');
+
+        Array.from(customerButtons).forEach(function (button) {
+            button.addEventListener('click', getCustomerData);
+        });
+
+    </script>
+}
+

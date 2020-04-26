@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="~/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/img/ConfArchSmall.png" style="max-width:100%" />
+            </div>
+            <div class="col-md-6 titlecol">
+                <span class="title">@ViewBag.Title</span>
+            </div>
+            <div class="col-md-4">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <h3>Hi @User.Identity.Name!</h3>
+                    <a asp-controller="Account" asp-action="Logout" class="btn btn-primary">Logout</a>
+                }
+                else
+                {
+                    <h3>Login here: </h3>
+                    <a asp-controller="Account" asp-action="Login" class="btn btn-primary">Login</a>
+
+                }
+            </div>
+        </div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="row"><div class="col-md-6"><h3>User is authenticated</h3></div></div>
+            <div class="row"><div class="col-md-6"><p>Name is @User.Identity.Name</p></div></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Authentication Type is @User.Identity.AuthenticationType</p>
+                </div>
+            </div>
+            <div class="row"><div class="col-md-6"><h3>Claims are :</h3></div></div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <ol>
+
+                        @foreach (var claim in @User.Claims.ToList()) {
+                        <li><strong>=====</strong>
+                            <ul>
+                                <li>Claim Type</li>
+                                <li>@claim.Type</li>
+                                <li>Claim Value</li>
+                                <li>@claim.Value</li>
+                                <li>Claim Issuer</li>
+                                <li>@claim.Issuer</li>
+                                <li>Claim OriginalIssuer</li>
+                                <li>@claim.OriginalIssuer</li>
+                                <li>Claim Properties</li>
+                                <li>@claim.Properties</li>
+                            </ul>                        
+                        </li>
+                         }
+                    </ol>
+                </div>
+            </div>
+
+
+
+
+
+
+}
+else
+{
+    <div class="row"><div class="col-md-6"><h3>User is not authenticated</h3></div></div>
+}
+
+
+
+        <div>
+            @RenderBody()
+        </div>
+        <div>
+            @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+            <h2>Cookie List</h2>
+            <ol>
+                @{
+                    foreach (var cookie in HttpContextAccessor.HttpContext.Request.Cookies)
+                    {
+                        <li>
+                            Cookie
+                            <ul>
+                                <li>Key</li>
+                                <li> @cookie.Key</li>
+                                <li>Value</li>
+                                <li>@cookie.Value</li>
+                                <li>Options</li>
+                            </ul>
+                        </li>
+                    }
+                }
+            </ol>
+        </div>
+    </div>
+
+    
+</body>
+</html>
