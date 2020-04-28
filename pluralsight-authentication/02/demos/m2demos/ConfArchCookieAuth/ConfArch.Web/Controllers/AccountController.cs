@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -9,11 +8,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.DataProtection;
-using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics;
 
 namespace ConfArch.Web.Controllers
 {
@@ -29,31 +24,6 @@ namespace ConfArch.Web.Controllers
         [AllowAnonymous]
         public IActionResult Login(string returnUrl = "/")
         {
-            //Response.Cookies.Append("MyCookie", "value1");
-            //var cookieValue = Request.Cookies["MyCookie"];
-            //var cookieValueNull = Request.Cookies["nonexistent"]; //return null
-            //var cookieOptions = new CookieOptions
-            //{
-            //    Expires = DateTime.Now.AddDays(30)
-            //};
-            //Response.Cookies.Append("MyCookie", "value1", cookieOptions);
-            //Console.WriteLine($"\ncookieValue is {cookieValue}");
-
-
-
-
-            // Encryption
-            // add data protection services
-            var serviceCollection = new ServiceCollection();
-            serviceCollection.AddDataProtection();
-            var services = serviceCollection.BuildServiceProvider();
-
-            // create an instance of MyClass using the service provider
-            var instance = ActivatorUtilities.CreateInstance<EncryptData>(services);
-            instance.RunSample();
-
-
-
             return View(new LoginModel { ReturnUrl = returnUrl });
         }
 
@@ -77,8 +47,6 @@ namespace ConfArch.Web.Controllers
                 CookieAuthenticationDefaults.AuthenticationScheme);
             var principal = new ClaimsPrincipal(identity);
 
-            // note that can also set the expiresUTC property on the cookie to ensure
-            // the cookie expires at some point
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 principal,
@@ -142,36 +110,6 @@ namespace ConfArch.Web.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return Redirect("/");
-        }
-    }
-
-
-    public class EncryptData
-    {
-        IDataProtector _protector;
-
-        // the 'provider' parameter is provided by DI
-        public EncryptData(IDataProtectionProvider provider)
-        {
-            _protector = provider.CreateProtector("Contoso.MyClass.v1");
-        }
-
-        public void RunSample()
-        {
-
-            string input = "Here is some data to encrypt";
-
-            // protect the payload
-            string protectedPayload = _protector.Protect(input);
-            Debug.WriteLine("\n\nEncrypted Data\\");
-            Console.WriteLine($"Protect returned: {protectedPayload}");
-            Debug.WriteLine($"Protect returned: {protectedPayload}");
-
-            // unprotect the payload
-            Debug.WriteLine("\n\nDecrypted Data\n"); 
-            string unprotectedPayload = _protector.Unprotect(protectedPayload);
-            Console.WriteLine($"Unprotect returned: {unprotectedPayload}");
-            Debug.WriteLine($"Unprotect returned: {unprotectedPayload}");
         }
     }
 }

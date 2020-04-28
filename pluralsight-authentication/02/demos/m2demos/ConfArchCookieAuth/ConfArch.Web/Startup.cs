@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Authorization;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,7 +24,6 @@ namespace ConfArch.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews(o => o.Filters.Add(new AuthorizeFilter()));
-            services.AddRazorPages().AddMvcOptions(o => o.Filters.Add(new AuthorizeFilter()));
             services.AddScoped<IConferenceRepository, ConferenceRepository>();
             services.AddScoped<IProposalRepository, ProposalRepository>();
             services.AddScoped<IAttendeeRepository, AttendeeRepository>();
@@ -35,46 +33,9 @@ namespace ConfArch.Web
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
                     assembly => assembly.MigrationsAssembly(typeof(ConfArchDbContext).Assembly.FullName)));
 
-            //services.AddAuthentication()
-            //    .AddCookie("");   // default scheme name
-
-            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            //    .AddCookie();
-
-            //services.AddAuthentication()
-            //    .AddCookie("CookieSchemeName");
-
-            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            //    .AddCookie(cookie => cookie.Events = new CookieAuthenticationEvents {
-            //        OnValidatePrincipal = async (cookie) => { cookie.RejectPrincipal();  },
-            //    });
-
-            services.AddHttpContextAccessor();
-            
-            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-
-            //services.AddAuthentication(o =>
-            //{
-            //    o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            //    //o.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-            //})
-            //    .AddCookie()
-            //    .AddCookie(ExternalAuthenticationDefaults.AuthenticationScheme)
-            //    .AddGoogle(o =>
-            //    {
-            //        o.SignInScheme = ExternalAuthenticationDefaults.AuthenticationScheme;
-            //        o.ClientId = Configuration["Google:ClientId"];
-            //        o.ClientSecret = Configuration["Google:ClientSecret"];
-            //    });
-
-
-
-
-            services.AddAuthentication(o =>
-            {
+            services.AddAuthentication(o => { 
                 o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                o.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-
+               // o.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
             })
                 .AddCookie()
                 .AddCookie(ExternalAuthenticationDefaults.AuthenticationScheme)
@@ -84,14 +45,10 @@ namespace ConfArch.Web
                     o.ClientId = Configuration["Google:ClientId"];
                     o.ClientSecret = Configuration["Google:ClientSecret"];
                 });
-
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // This bit does the middleware
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -107,9 +64,9 @@ namespace ConfArch.Web
 
             app.UseRouting();
 
-            // order is important!!!  after routing before endpoints!!!
             app.UseAuthentication();
             app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

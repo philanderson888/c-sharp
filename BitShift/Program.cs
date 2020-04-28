@@ -11,12 +11,12 @@ namespace BitShift
             int i = 1;
 
             // Shift i one bit to the left. The result is 2.
-            
+
             // Think of it as   
             // 1010 binary number shifting everything << to left
             // becomes
             // 10100 ie double
-                            
+
             Console.WriteLine("0x{0:x}", i << 1);
             Console.WriteLine("Starting with i=1");
             Console.WriteLine(i);
