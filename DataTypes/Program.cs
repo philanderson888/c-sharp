@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-
+using System.Dynamic;
 
 namespace DataTypes
 {
@@ -24,7 +24,47 @@ namespace DataTypes
             Console.WriteLine(double.MaxValue);
             Console.WriteLine(double.MinValue);
             decimal dd = 1.2345678902345678901234M;  // M optional
-            
+
+
+            double d1 = 0.1;
+            double d2 = 0.2;
+            if (d1 + d2 == 0.3)
+            {
+                Console.WriteLine("the numbers are the same");
+            }
+            else
+            {
+                Console.WriteLine("the two numbers add up to give " + (d1+d2));
+            }
+
+            double total = 0;
+            for (int counter = 1; counter < 8192; counter++)
+            {
+                total += 0.7;
+            }
+            Console.WriteLine($"total is {total}");
+
+
+
+            decimal decimal1 = 0.1M;
+            decimal decimal2 = 0.2M;
+            if (decimal1 + decimal2 == 0.3M)
+            {
+                Console.WriteLine("the numbers are the same");
+            }
+            else
+            {
+                Console.WriteLine("the two numbers add up to give " + (decimal1 + decimal2));
+            }
+
+            double decimalTotal = 0;
+            for (int counter = 1; counter < 8192; counter++)
+            {
+                decimalTotal += 0.7;
+            }
+            Console.WriteLine($"total is {decimalTotal}");
+
+
 
             Console.WriteLine("Integers by default are 32 bits long.");
             Console.WriteLine("Example of int is {0}", i);
@@ -44,13 +84,16 @@ namespace DataTypes
 
 
 
+            
 
 
 
-
-            string x = "h";
+            string x = "a";
             char c = Convert.ToChar(x);
             Console.WriteLine("Char c is " + c);
+
+            int charValue = (int)c;
+            Console.WriteLine($"The value of character {c} is {charValue}");
 
 
 
@@ -142,6 +185,16 @@ namespace DataTypes
             Console.WriteLine("array count is " + array02.Count());
             int[,] arraygrid = new int[5,5];    // 2d
 
+
+
+
+
+
+
+
+
+
+
             DateTime date01 = new DateTime();
             Console.WriteLine(date01);
 
@@ -160,6 +213,46 @@ namespace DataTypes
 
             var Interval01 = date03 - date02;
             Console.WriteLine(Interval01);
+
+            // get the month as a number
+            Console.WriteLine($"Sunday as a number is {(int)DayOfWeek.Sunday}");
+            // Console.WriteLine($"January as a number is {}");
+            var dayinjanuary = new DateTime(2020, 01, 01);
+            Console.WriteLine($"The month number of January is {dayinjanuary.Month}");
+            
+            
+            
+
+
+
+            var datetimenow = DateTime.Now;
+            // offset by one hour (British Summer Time)
+            var offset = new TimeSpan(1, 0, 0);
+            var datetimeoffset = new DateTimeOffset(datetimenow, offset);
+            Console.WriteLine($"datetimeoffset is {datetimeoffset}");
+
+
+
+            var timespan = new TimeSpan(1, 0, 0);
+            var date = DateTime.Now + timespan;
+
+
+
+
+
+            var tick = new TimeSpan(1);
+            date = date + tick;
+
+
+
+
+
+
+
+
+
+            
+
 
             Console.WriteLine();
 
@@ -268,6 +361,37 @@ namespace DataTypes
             Console.WriteLine(myNumber2);
             Console.WriteLine(myNumber2.GetType());
 
+
+
+
+            // random object
+            dynamic object01 = new ExpandoObject();
+            object01.name = "Fred";
+            object01.age = 22;
+            object01.balance = 32.50;
+            Console.WriteLine($"object01 has name {object01.name} and age {object01.age} " +
+                $"with balance {object01.balance}");
+
+            // creating object AS A LITERAL
+            var object02 = new
+            {
+                name = "Fred",
+                age = 22
+            };
+            Console.WriteLine($"{object02.name} has age {object02.age}");
+
+            var item = new Object();
+
+            dynamic object03 = 100;
+            Console.WriteLine($"adding 10 to {object03} gives {object03+10}");
+            object03 = "hello";
+            Console.WriteLine($"adding 10 to {object03} gives {object03 + 10}");
+
+
+            var rollTheDice = new Random();
+            Console.WriteLine(rollTheDice.Next(6));
+            Console.WriteLine(rollTheDice.Next(6));
+            Console.WriteLine(rollTheDice.Next(6));
 
 
             Console.ReadLine();

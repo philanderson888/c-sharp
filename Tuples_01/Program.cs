@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security;
+using System.Runtime.ExceptionServices;
 
 namespace Tuples_01
 {
@@ -44,6 +46,17 @@ namespace Tuples_01
             (string name, int age) = tuple01;
 
             WriteLine($"{name} has age {age}");
+
+            var tuple02 = (10, "hello",true);
+            Console.WriteLine(tuple02.Item1); // 10
+            Console.WriteLine(tuple02.Item2); // "hello"
+            Console.WriteLine(tuple02.Item3); // true
+            // we can assign variable names
+            int num1 = 10;
+            string greeting = "hello";
+            bool isValid = true;
+            var tuple03 = (num1, greeting, isValid);
+            Console.WriteLine(tuple03.greeting);
         }
     }
 }

@@ -24,11 +24,21 @@ namespace Enum_01
     }
 
 
+
+
+
     class Program
     {
+
+        enum Fruit1
+        {
+            Lemon, Banana, Pear
+        }
+
         static void Main(string[] args)
         {
-            Fruit f = Fruit.Cherry;
+
+           Fruit f = Fruit.Cherry;
             Console.WriteLine(f);
             Console.WriteLine((int)f);
 
@@ -44,7 +54,13 @@ namespace Enum_01
 
             Console.WriteLine("Items in Test are " + (int)Test.count);
 
-            Console.ReadLine();
+            Console.WriteLine($"Fruit.Pear has value {Fruit1.Pear}");
+            Console.WriteLine($"Numeric value is {(int)Fruit1.Pear}");
+
+            int ii = default;
+            
         }
+
+        
     }
 }
