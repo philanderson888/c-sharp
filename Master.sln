@@ -549,6 +549,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hash_02", "Hash_02\Hash_02.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cookies_01", "Cookies_01\Cookies_01.csproj", "{78EEDC8F-893E-4357-A68B-360BDD46EC02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codewars", "Codewars\Codewars.csproj", "{47CCB89F-EE85-4833-AF2C-5AE39D15D31C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1647,6 +1649,10 @@ Global
 		{78EEDC8F-893E-4357-A68B-360BDD46EC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78EEDC8F-893E-4357-A68B-360BDD46EC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78EEDC8F-893E-4357-A68B-360BDD46EC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47CCB89F-EE85-4833-AF2C-5AE39D15D31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47CCB89F-EE85-4833-AF2C-5AE39D15D31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47CCB89F-EE85-4833-AF2C-5AE39D15D31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47CCB89F-EE85-4833-AF2C-5AE39D15D31C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
