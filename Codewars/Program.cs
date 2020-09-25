@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 
@@ -13,6 +13,7 @@ namespace Codewars
             IsSequenceValid("1 2 3 4 a");
             IsSequenceValid("1 3 4 5");
             SumOfBinaryDigits(1234);
+            FindNumberOfSubstringsInAString("a a a  b  c c  d d d d  e e e e e");
         }
         #endregion Main
         #region IsASequenceValid
@@ -79,5 +80,17 @@ namespace Codewars
             return total2;
         }
         #endregion SumOfBinaryDigits
+
+        #region FindNumberOfSubstringsInAString
+        static string[] FindNumberOfSubstringsInAString(string s) {
+            /*
+            https://www.codewars.com/kata/51e056fe544cf36c410000fb/train/csharp
+            find occurrences of substring in string
+            */
+
+            return new string[0];
+        }
+        #endregion FindNumberOfSubstringsInAString
+
     }
 }
