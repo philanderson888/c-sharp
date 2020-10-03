@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 
 namespace Codewars
@@ -14,6 +15,7 @@ namespace Codewars
             IsSequenceValid("1 3 4 5");
             SumOfBinaryDigits(1234);
             FindNumberOfSubstringsInAString("a a a  b  c c  d d d d  e e e e e");
+            FindFirstUniqueLetterInString("stress");
         }
         #endregion Main
         #region IsASequenceValid
@@ -80,7 +82,6 @@ namespace Codewars
             return total2;
         }
         #endregion SumOfBinaryDigits
-
         #region FindNumberOfSubstringsInAString
         static string[] FindNumberOfSubstringsInAString(string s) {
             /*
@@ -91,6 +92,44 @@ namespace Codewars
             return new string[0];
         }
         #endregion FindNumberOfSubstringsInAString
+        #region FindFirstUniqueLetterInString
+        static string FindFirstUniqueLetterInString(string s)
+        {
+            /*
+            https://www.codewars.com/kata/52bc74d4ac05d0945d00054e/train/csharp
+            3 October 2020
+            Found this very easy! Grade 2 out of 10 for difficulty
+            */
+            Console.WriteLine($"\n\nFinding first unique letter in string {s}");
+            var lower = s.ToLower();
+            string foundLetter = "";
+            for (var i = 0; i < lower.Length; i++)
+            {
+                var match = false;
+                var letter = lower[i];
+                for (var j = 0; j < lower.Length; j++)
+                {
+                    if (i != j)
+                    {
+                        Console.WriteLine($"comaring {letter} with {lower[j]}");
+                        if (letter == lower[j])
+                        {
+                            match = true;
+                            break;
+                        }
+                    }
+                }
+                if (match == false)
+                {
+                    // get original case
+                    foundLetter = s[i].ToString();
+                    break;
+                }
+            }
+            Console.WriteLine($"found letter is {foundLetter}");
+            return foundLetter;
+        }
+        #endregion FindFirstUniqueLetterInString
 
     }
 }
