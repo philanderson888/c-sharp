@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Event_04_Tick
@@ -16,6 +17,7 @@ namespace Event_04_Tick
             Listener l = new Listener();
             l.Subscribe(m);
             m.Start();
+            Console.ReadLine();
 
         }
     }

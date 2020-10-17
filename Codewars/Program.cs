@@ -1,6 +1,5 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Globalization;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Codewars
@@ -130,6 +129,5 @@ namespace Codewars
             return foundLetter;
         }
         #endregion FindFirstUniqueLetterInString
-
-    }
+        
 }
