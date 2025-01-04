@@ -20,7 +20,7 @@
     - [ILDASM](#ildasm)
     - [Runnning a .NET project](#runnning-a-net-project)
     - [.NET vs .NET core](#net-vs-net-core)
-- [Lesson 01 : Introduction To C](#lesson-01--introduction-to-c)
+- [Lesson 01 : Introduction To C#](#lesson-01--introduction-to-c)
   - [.NET](#net)
     - [Introduction To .NET](#introduction-to-net-1)
     - [.NET structure](#net-structure-1)
@@ -75,12 +75,10 @@
     - [Obtain an API key](#obtain-an-api-key)
     - [nuget push](#nuget-push)
     - [manage packages online](#manage-packages-online)
-- [DotNet Add Package <name>](#dotnet-add-package-name)
-- [Variables And Data Types](#variables-and-data-types)
-  - [Strongly Typed](#strongly-typed)
-    - [Declaring](#declaring)
-    - [Initialising](#initialising)
-    - [Multiple per line if wanted](#multiple-per-line-if-wanted)
+- [DotNet Add Package ](#dotnet-add-package-)
+  - [03 types](#03-types)
+    - [strongly typed](#strongly-typed)
+    - [code](#code-1)
   - [Strings](#strings)
     - [String Literals](#string-literals)
     - [string vs String](#string-vs-string)
@@ -114,12 +112,11 @@
     - [Null-Coalesce Operator ??](#null-coalesce-operator-)
     - [Test for a type : If .. is ..](#test-for-a-type--if--is-)
     - [Test for a type](#test-for-a-type)
-    - [Tuples](#tuples)
+  - [Tuples](#tuples)
 - [Tuples - Old Declaration](#tuples---old-declaration)
 - [Tuples - C#7](#tuples---c7)
 - [Full Example](#full-example)
     - [Tuples](#tuples-1)
-    - [Tuples](#tuples-2)
     - [Objects](#objects)
   - [Checked](#checked)
   - [Dynamic](#dynamic)
@@ -183,21 +180,21 @@
     - [Array Aggregate (Total)](#array-aggregate-total)
     - [Array Aggregate (output as CSV)](#array-aggregate-output-as-csv)
 - [Collections](#collections)
-  - [Generics  <T>](#generics--t)
+  - [Generics  ](#generics--)
   - [Lists](#lists)
     - [IndexOf](#indexof)
-    - [array[] syntax](#array-syntax)
+    - [array\[\] syntax](#array-syntax)
     - [Insert Items At A Given Index (similar to Javascript 'splice')](#insert-items-at-a-given-index-similar-to-javascript-splice)
     - [Lists Of Objects](#lists-of-objects)
-  - [Dictionary<TKey,TValue>](#dictionarytkeytvalue)
+  - [Dictionary\<TKey,TValue\>](#dictionarytkeytvalue)
   - [Stack vs Heap - Stack holds value types and pointers to Heap.  Heap holds reference types](#stack-vs-heap---stack-holds-value-types-and-pointers-to-heap--heap-holds-reference-types)
   - [Queue : Enqueue, Dequeue, Peek, Contains](#queue--enqueue-dequeue-peek-contains)
   - [Stack : Push, Pop, Contains, Peek](#stack--push-pop-contains-peek)
   - [Enum](#enum)
     - [Enum Flags](#enum-flags)
   - [Sets](#sets)
-    - [LinkedList<T>](#linkedlistt)
-    - [HashSet<T>](#hashsett)
+    - [LinkedList](#linkedlist)
+    - [HashSet](#hashset)
     - [ArrayList of Objects](#arraylist-of-objects)
     - [HashTable Of Key/Value Object Pairs : Don't Use](#hashtable-of-keyvalue-object-pairs--dont-use)
     - [Sorting](#sorting)
@@ -4613,17 +4610,22 @@ https://github.com/aspnet/AspNetCore/wiki/Engineering-guidelines#coding-style-gu
 
 ```
 
-# Variables And Data Types
+## 03 types
 
-## Strongly Typed
+### strongly typed
 
-C# is a strongly typed language. This means that unless explicitly opted out with the 'dynamic' keyword, all data types must be fully clarified and defined and understood by the compiler at compile time. This means when the code runs at run time, there is less work to do and the code runs faster.
+all .net types must be declared unless type is `dynamic` in which case the type is determined at runtime
 
-### Declaring
+### code
 
-### Initialising
+see code at
 
-### Multiple per line if wanted
+[03-types](/projects/03-types/)
+
+see tuples at 
+
+[10-tuples](/projects/10-tuples/)
+
 
 ## Strings
 
@@ -5254,7 +5256,7 @@ if (o is int i) {
 }
 ```
 
-### Tuples
+## Tuples
 
 Tuples are small, lightweight, custom-made objects that make it easier to return one object as the result of an operation. For example if a method returns one object we can create a tuple to be the return type.
 
@@ -5355,8 +5357,6 @@ namespace lab_82_tuple
     }
 }
 ```
-
-### Tuples
 
 ### Tuples
 
