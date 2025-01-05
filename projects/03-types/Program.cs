@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using static System.Console;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,20 @@ namespace types
     {
         static void Main(string[] args)
         {
-            string x = default;
-            WriteLine($"x is {x}");
+            WriteLine("\n\n\n\n\n\n\n\n\n");
+            WriteLine("============================================================");
+            WriteLine("============================================================");
+            WriteLine("====                        Types                        ====");
+            WriteLine("============================================================");
+            WriteLine("============================================================");
+            WriteLine("");
+
+            WriteLine("============================================================");
+            WriteLine("====                    Introduction                    ===="); 
+            WriteLine("============================================================");
+            WriteLine("");
+            
+
         }
     }
 }
