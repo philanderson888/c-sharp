@@ -26,13 +26,7 @@ namespace types
             WriteLine("====                    Introduction                    ===="); 
             WriteLine("============================================================");
             WriteLine("");
-            WriteLine("Null is a special value that represents the absence of a value.");
-            WriteLine("It is used to indicate that a variable does not have a value.");
-            WriteLine("Null is a reference type and can be assigned to any reference type variable.");
-            WriteLine("Null is not the same as zero or an empty string.");
-            WriteLine("Null is not the same as an empty collection.");
-            WriteLine("Null is not the same as a default value.");
-            WriteLine("Null is not the same as undefined, void, nil, None, Nothing, NaN, or Infinity.");
+            WriteLine("null is a reference type assigned to indicate the lack of an assigned value");
 
             WriteLine(" ");
             WriteLine("... null check enabled using `#nullable enable` directive.");
@@ -45,7 +39,7 @@ namespace types
             WriteLine(" ");
             WriteLine("... declare variable and assign it as null.");
             WriteLine("... exlamation mark suppresses compiler warning ...");
-            //FooBar fooBar = null;
+            WriteLine("... but it is not recommended to use it.");
             FooBar fooBar = null!;
 
             WriteLine("... try to access the variable.");
@@ -77,7 +71,7 @@ namespace types
             WriteLine("====                   Default                ==============");
             WriteLine("============================================================");
             WriteLine("");
-            WriteLine("... default types for primitives are 0, false, null, etc.");
+            WriteLine("... default types for primitives are 0, false, etc.");
             WriteLine("... default types for reference types are null.");
 
             int defaultInteger = default;
